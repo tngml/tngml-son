@@ -1,6 +1,7 @@
 * {
   font-size: 20px;
   font-weight: 700;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,14 +28,6 @@ header {
   padding: 0 20px;
   margin-bottom: 50px;
 }
-.header1 {
-  display: flex;
-  align-items: center;
-}
-
-.header1 .li {
-  flex-direction: row-reverse;
-}
 
 /* TODO: header1 ~ 3까지 완성해주세요! */
 
@@ -56,3 +49,14 @@ header {
 }
 
 /* header3 */
+.header3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header3 ul {
+  display: flex;
+}
+.header3 ul li {
+  padding: 0 10px;
+}
