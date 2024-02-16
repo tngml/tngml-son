@@ -1,0 +1,139 @@
+.px {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+/*em : 부모요소의 font-size가 기준-> 사용시 주의 필요*/
+.em-text {
+  /*부모 요소의 font-size를 받아오기 때문에 점점 커짐*/
+  font-size: 2em;
+}
+/*rem : root(html)의 font-size가 기준-> 중첩되어도 영향 X*/
+/*html의 font-size를 지정하지 않으면 기본적으로 1rem = 16px*/
+.rem-text {
+  font-size: 2rem;
+}
+
+.em {
+  width: 10em;
+  height: 10em;
+  background-color: aliceblue;
+}
+
+.em-parents {
+  font-size: 10px;
+  background-color: violet;
+}
+
+.rem {
+  width: 10rem;
+  height: 10rem;
+  background-color: rgb(69, 140, 233);
+}
+.rem-parents {
+  font-size: 30px;
+  background-color: lightgoldenrodyellow;
+}
+.percent {
+  width: 50%;
+  background-color: palevioletred;
+}
+.percent-parents {
+  background-color: rgb(156, 230, 156);
+}
+.vh {
+  width: 30vh;
+  height: 30vh;
+  background-color: chocolate;
+}
+
+.vw {
+  width: 30vw;
+  height: 30vw;
+  background-color: thistle;
+}
+
+.d-block {
+  background-color: antiquewhite;
+  border: 1px solid yellow;
+
+  /*width: 100px;
+  height: 100px;*/
+}
+
+.d-inline {
+  background-color: lightgray;
+  border: 1px solid darkblue;
+  /*inline  요소는 컨텐트 
+  /*width: 100px;
+  height: 100px;*/
+}
+.d-inline-block {
+  display: inline-block;
+  border: 1px solid salmon;
+  font-size: 30ox;
+}
+
+.container {
+  width: auto;
+  height: 200px;
+  background-color: orange;
+}
+
+.container * {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+}
+
+.html {
+  background-color: skyblue;
+}
+.css {
+  background-color: green;
+}
+.js {
+  background-color: red;
+}
+
+/*max-width, min-width*/
+.parent {
+  width: 500px;
+  height: 200px;
+  background-color: pink;
+}
+
+.min {
+  /*최소 넓이이므로 400px 보다 늘어날 수 있지만 줄어들 수 없음*/
+  min-width: 400px;
+  height: 100px;
+  background-color: purple;
+}
+
+.max {
+  /*최대 넓이 이므로 400px 보다 줄어들 수 있지만 늘어날 수 없음*/
+  max-width: 400px;
+  height: 100px;
+  background-color: yellowgreen;
+}
+.header {
+  height: 130px;
+  background-color: aqua;
+}
+/*height 도 마찬가지*/
+/*하지만 max-width와 min-width, max-height와 min-height는
+ 주로 반응형을 위한 웹 페이지에서 사용되기 때문에 width 기반으로 많이 쓰임*/
+.calc {
+  width: calc(100vw-300px);
+  height: calc(100vh-130-px);
+  background-color: beige;
+}
+
+/*border & border-radius*/
+
+/*box-sizing*/
+/*요소의 크기 계산 기준을 지정하는 속성*/
+.content-box {
+  height: 100px;
+  width: 100px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disappear on Hover</title>
+    <style>
+      .disappear-on-hover {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        transition: opacity 0.3s; /* 요소가 사라지는 트랜지션 효과 추가 */
+      }
+
+      .disappear-on-hover:hover {
+        opacity: 0; /* 마우스가 요소 위에 있을 때 투명도를 0으로 설정하여 요소를 사라지게 함 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="disappear-on-hover"></div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Styles</title>
+    <style>
+      .parent {
+        width: 500px;
+        height: 200px;
+        background-color: pink;
+      }
+
+      .min {
+        /*최소 넓이이므로 400px 보다 늘어날 수 있지만 줄어들 수 없음*/
+        min-width: 400px;
+        height: 100px;
+        background-color: purple;
+      }
+
+      .max {
+        /*최대 넓이 이므로 400px 보다 줄어들 수 있지만 늘어날 수 없음*/
+        max-width: 400px;
+        height: 100px;
+        background-color: yellowgreen;
+      }
+      .header {
+        height: 130px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>max-width, min-width</h2>
+    <div class="parent">
+      <div class="min"></div>
+      <div class="max"></div>
+    </div>
+    <br />
+  </body>
+</html>

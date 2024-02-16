@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성 선택자</title>
+    /* 속어만 작성하는 경우 해당 속성이 부여된 모든 요소를 선택*/
+    <style>
+      [disabled] {
+        background-color: red;
+      }
+      [placeholder] {
+        background-color: yellow;
+      }
+      /*속성값까지 작성하는 경우 해당 속성과 속성값을 가진 요소를 선택*/
+      /*속성값만 선택하는 것은 안됨->["password"]*/
+      [type="password"] {
+        font-size: 30px;
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+      [class=".square"{
+        background-color: blueviolet;
+      }
+      /*요소의 ㅂ든 속성을 선택할 수 ㅣ있음.*/
+      /*하지만 번거로운으로 인해 속성 선택자로 c극 선택하는 경우 거의 ㅓ없음*/
+      /*우선 순위 동일*/
+      [herf]{color: aqua;}
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="text1" />
+    <input type="text" placeholder="text2" />
+    <input type="text" placeholder="text3" disabled />
+    <input type="password/>
+
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </body>
+</html>

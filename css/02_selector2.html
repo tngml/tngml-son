@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css 복합 선택자</title>
+    <style>
+      /*자식 선택자*/
+      header {
+        height: 70px;
+        background-color: aliceblue;
+      }
+      section {
+        border: 5px solid pink;
+      }
+      article {
+        border: 5px solid gold;
+      }
+      header > h1 {
+        color: violet;
+        text-align: center;
+      }
+      .first > h2 {
+        background-color: aqua;
+      }
+      .second > h2 {
+        background-color: midnightblue;
+        color: white;
+      }
+      /* 연쇄적으로 길게 나열 가능-> 선택자가 자세할수록 높은 우선순위를 가짐*/
+      main > .first > article > ul > li {
+        font-size: 10px;
+      }
+      /*후손 선택자*/
+      .second li {
+        font-size: 50;
+        background-color: tomato;
+        color: white;
+      }
+      /*인접 형제 선택자*/
+      #sunAndMoon {
+        background-color: aquamarine;
+        font-size: 20px;
+      }
+      /*일반 형제 선택자*/
+      #snowWhite ~ li {
+        background-color: bisque;
+      }
+      li#snowWhite {
+        background-color: springgreen;
+      }
+      section.second {
+        background-color: yellow;
+      }
+      main section.second ul > li > ul > li,
+      .first article span {
+        border: 5px dotted red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>복합 선택자 연습</h1>
+    </header>
+    <main>
+      <section class="first">
+        <h2>첫 번째 section</h2>
+        <article>
+          <span>전래동화</span>
+          <ul>
+            <li>콩쥐팥쥐</li>
+            <li id="sunAndMoon">햇님 달님</li>
+            <li>흥부와 놀부</li>
+            <li>은혜갚은 까치</li>
+          </ul>
+        </article>
+      </section>
+      <section class="second">
+        <h2>두 번째 section</h2>
+        <article>
+          <span>외국동화</span>
+          <ul>
+            <li>
+              신데렐라
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+            </li>
+            <li>미녀와 야수</li>
+            <li id="snowWhite">백설공주</li>
+            <li>알라딘</li>
+            <li>이상한 나라의 앨리스</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

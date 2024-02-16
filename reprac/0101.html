@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./0101.css" />
+    <title>css 속성 1</title>
+  </head>
+  <body>
+    <h2>크기 단위</h2>
+
+    <div class="px">100px</div>
+    <div class="em-text">
+      <!-- em -> 32px -->
+      <div class="em-text">
+        <!-- 1em은 32px 됨 em -> 64px -->
+        <div class="em-text">em은 128px</div>
+      </div>
+
+      <br /><br /><br />
+    </div>
+    <div class="px">100px</div>
+    <div class="rem-text">
+      rem
+      <div class="rem-text">
+        rem
+        <div class="rem-text">rem</div>
+      </div>
+    </div>
+
+    <div class="em">10em</div>
+    <div class="em-parents">
+      em 부모 요소 font-size: 10px
+      <div class="em">10em</div>
+    </div>
+
+    <div class="rem">10rem</div>
+    <div class="rem-parents">
+      rem 부모 요소 font-size: 30px
+      <div class="rem">10em</div>
+    </div>
+    <div class="percent-parents">
+      % 부모 요소 300px
+      <div class="percent">50%</div>
+    </div>
+    <div class="vh">30vh</div>
+    <div class="vw">30vw</div>
+
+    <br />
+    <hr />
+    <h2>display 속성</h2>
+    <div class="d-block">block 1</div>
+    <div class="d-block">block 2</div>
+    <div class="d-block">block 3</div>
+    <div class="d-block">block 4</div>
+    <br /><br />
+    <span class="d-inline">inline 1</span>
+    <span class="d-inline">inline 2</span>
+    <span class="d-inline">inline 3</span>
+    <span class="d-inline">inline 4</span>
+    <br /><br />
+    <span class="d-inline-block">inline-block 1</span>
+    <span class="d-inline-block">inline-block 2</span>
+    <span class="d-inline-block">inline-block 3</span>
+    <span class="d-inline-block">inline-block 4</span>
+
+    <br />
+    <!-- inline 요소 자식으로 block 요소 들어갈 경우 레이아웃 깨짐 사용 x -->
+    <span style="border: 5px solid black">
+      span
+      <div style="background-color: gray">div</div>
+    </span>
+    <br />
+    <h3>박스 모델 사용하기 실습</h3>
+    <div class="container">
+      <div class="html">Html</div>
+      <div class="css">Css</div>
+      <div class="js">Javascript</div>
+    </div>
+    <br />
+    <hr />
+
+    <h2>max-width,min-width</h2>
+    <div class="parent">
+      <div class="min"></div>
+      <div class="max"></div>
+    </div>
+    <header class="head"><div>header</div></header>
+    <div class="calc">calc()사용하기</div>
+
+    <h2>border,border-radiouse</h2>
+    <div class="square border">border</div>
+    <button class="square rounded">rounded</button>
+    <br />
+    <hr />
+    <div class="boxsizing content-box">content-box</div>
+    <div class="boxsizing border-box">border-box</div>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용자 인터랙션 예제</title>
+    <style>
+      form {
+        width: 400px;
+      }
+      /* hover */
+
+      /* focus */
+      textarea {
+        width: 100%;
+      }
+      /* checked */
+
+      /* active */
+      button {
+        float: right;
+        padding: 5px 15px;
+        background-color: #f96666;
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+      }
+      /* 제목에 마우스를 올렸을 때 배경색과 글자색 변경 */
+      h3:hover {
+        background-color: yellow;
+        color: blue;
+      }
+
+      /* 건의 사항 입력란 클릭하고 포커스되었을 때 배경색 변경 */
+      textarea:focus {
+        background-color: lightblue;
+      }
+
+      /* 체크박스를 체크했을 때 체크박스 옆의 글자의 배경색 변경 */
+      input[type="checkbox"]:checked + label {
+        background-color: yellow;
+      }
+
+      /* 체크박스 라벨 색상 변경 */
+      #myCheckbox:checked + label {
+        background-color: red;
+      }
+
+      #myCheckbox1:checked + label {
+        background-color: blue;
+      }
+      form {
+        width: 400px;
+      }
+      /* hover */
+
+      /* focus */
+      textarea {
+        width: 100%;
+      }
+      /* checked */
+
+      /* active */
+      button {
+        float: right;
+        padding: 5px 15px;
+        background-color: #f96666;
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>건의 사항을 적어주세요!</h3>
+    <textarea placeholder="건의 사항 작성란"></textarea>
+    <input type="checkbox" id="myCheckbox" />
+    <label for="myCheckbox">빨강</label>
+    <input type="checkbox" id="myCheckbox1" />
+    <label for="myCheckbox1">파랑</label>
+    <input type="checkbox" id="myCheckbox2" />
+    <label for="myCheckbox2">노랑</label>
+    <button id="submitButton">제출</button>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>복합선택자 실습</title>
+  </head>
+  <style>
+    p.lion {
+      background-color: red;
+    }
+    .zoo > ul .lion {
+      background-color: yellowgreen;
+    }
+    #tiger {
+      background-color: yellow;
+    }
+    .lion {
+      color: sienna;
+    }
+    .zoo .lion {
+      font-weight: 900;
+    }
+    #tiger + li {
+      background-color: skyblue;
+    }
+    .zoo li.lion ~ li {
+      background-color: orange;
+    }
+    .content article {
+      height: 900px;
+      border: 5px solid blue;
+    }
+    #detail {
+      background-color: yellow;
+    }
+  </style>
+  <body>
+    <section>
+      <a href="#detail">상세정보</a>
+      <a href="#review">후기</a>
+      <a href="#comunity">커뮤니티</a>
+    </section>
+    <section class="content">
+      <article id="detail">여기는 상세정보 내용</article>
+      <article id="review">여기는 후기 내용</article>
+      <article id="comunity">여기는 커뮤니티 내용</article>
+    </section>
+    <h1>복합선택자 사용 연습</h1>
+    <p>동물원에 왔어요</p>
+    <div class="zoo">
+      <ul>
+        <span>여긴 사파리!</span>
+        <li>곰</li>
+        <li id="tiger">호랑이</li>
+        <li>팬더</li>
+        <span class="lion">사자1</span>
+        <li class="lion">사자2</li>
+        <li>사육사 layla</li>
+        <li>사육사 레일라</li>
+      </ul>
+      <span class="lion"> 사파리 밖의 사자</span>
+    </div>
+    <p class="lion">야생의 사자</p>
+  </body>
+</html>
+
+반응

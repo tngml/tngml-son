@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        position: relative;
+      }
+      .container > * {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .item1 {
+        background-color: aquamarine;
+      }
+      .item2 {
+        background-color: bisque;
+        top: 30px;
+        left: 30px;
+      }
+      .item3 {
+        background-color: blueviolet;
+        top: 60px;
+        left: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>요소 쌓임 순서 및 z-index 실습</h2>
+    <div class="container">
+      <div class="item1"></div>
+      <div class="item2"></div>
+      <div class="item3"></div>
+    </div>
+  </body>
+</html>

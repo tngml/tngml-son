@@ -1,0 +1,98 @@
+/* 구글 폰트, link 태그, font-family를 사용해 웹 폰트 사용 */
+.google {
+    font-family: "Single Day", "Gothic A1", sans-serif;
+  }
+  /* snssn:@font-face, font-family 를 사용해 웹 폰트 사용 */
+  @font-face {
+    font-family: "seolleimcool-SemiBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/seolleimcool-SemiBold.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  .noonnu {
+    font-family: "seolleimcool-SemiBold"; sans-seri;
+  }
+  /* 모든 폰트의 지정 9-> *(전체 선택자) 사용 */
+  /* * {
+  font-family: "single day" ;
+  } */
+  .sentence {
+      font-weight: 700;
+      /* 글씨체마다 제공되는 font-weight 값이 모두 제각각이기 때문에 모든 값이 적용되는 것은 아님 */
+      font-size: 1rem;
+      text-align: center;
+      text-decoration: line-through;
+      text-decoration: underline;
+      /* 줄 간 간격 조정 대체로 배수를 나타내는 단위가 없는 것을 사용 */
+      line-height: 1;
+      line-height: 100%;
+  
+  }
+  /* px 값 지정 시 한 줄의 높이가  해당px로 지정되고 새로 가운데 정렬  */
+  /* 한 줄이 있을 때 세로 가운데 정렬로 사용 */
+  
+  /* opacity:투명도 (0~1 사이의 소수점 숫자 작성 */
+  /* 선택된 요소의 컨텐트를 모두 투명도 적용시킴 ->글자도 적용됨 */
+  /* background-color: rgb()속성을 통해 투명한 배경색을 지정하는 것과 다름 */
+  .opacity {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+  }
+  .opacity-20 {
+      opacity: 0.2;
+  }
+  .opacity-80 {
+      opacity: 0.8;
+  }
+  
+  .opacity-1 {
+      /* 완전 불투명 */
+      opacity: 1;
+  }
+  /* 요소를 숨기는 방법 */
+  .square {
+      width: 100px;
+      height: 100px;
+      border: 1px solid;
+      display: inline-block;
+    }
+    .d-none {
+      /* display: none; */
+      background-color: red;
+    }
+    .invisible {
+      /* visibility: hidden; */
+      background-color: orangered;
+    }
+   .opacity-0 {
+      /* opacity: 0; */
+      background-color: tomato;
+    }
+    /* .overflow :content가 해당 요소를 넘쳤을 때의 처리 지정 */
+    .text-container {
+      width: 70vw;
+      height: 300px;
+      border: 5px solid black;
+    }
+    .overflow-hidden {
+      /* overflow: hidden; */
+    }
+    
+    /* auto와 scroll차이점은 auto는 사진크기가 넘치지 않으면 스크롤이 생기지 않음 */
+    .overflow-auto {
+      /* overflow: auto; */
+    }
+    /* scroll은 content가 해당 요소의 크기를 넘치지 않아도 스크롤라인이 생김 */
+    .overflow-scroll {
+      overflow: scroll;
+    }
+    .overflow-vivible {
+      overflow: hidden;
+      overflow-y: auto;
+      overflow: hidden auto;
+    }
+    /* x, y 축 에만 지정하는 속성 */
+    /* 단축속성 */
+  

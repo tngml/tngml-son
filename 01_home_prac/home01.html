@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>viewport unit</title>
+    <style>
+      header {
+        width: 100vw;
+        background-color: silver;
+      }
+      .parent {
+        width: 600px;
+        background-color: silver;
+      }
+      .child {
+        width: 50%;
+        background-color: green;
+      }
+      .child2 {
+        width: 50vw;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>logo</h1>
+    </header>
+    <hr />
+    <div class="parent">
+      <div class="child">percent</div>
+      <div class="child2">vw</div>
+    </div>
+  </body>
+</html>

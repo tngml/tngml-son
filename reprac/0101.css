@@ -1,0 +1,184 @@
+.px {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+/* em: 부모 요소의 font -size가 기준 -> 사용 시 주의 필요 */
+.em-text {
+  /* 부모 요소의 font-size를 받아오기 때문에 점점 커짐 */
+  font-size: 2em;
+}
+/* rem : root(html)의 font-size가 기준 -> 중첩되어도 영향 x*/
+/* html의 font-size를 지정하지 않으면 기본적으로 1rem = 16px */
+.rem-text {
+  font-size: 2rem;
+}
+/* em,rem 폰트 크기 속성에만 사용하는 것 아님 */
+.em {
+  width: 10em;
+  height: 10em;
+  background-color: aliceblue;
+}
+.em-parents {
+  font-size: 10px;
+  background-color: violet;
+}
+.rem {
+  width: 10rem;
+  height: 10rem;
+  background-color: lightsteelblue;
+}
+.rem-parents {
+  font-size: 30px;
+  background-color: lightgoldenrodyellow;
+}
+.percent {
+  /* 자동으로 너비 변경됨 */
+  width: 50%;
+  background-color: pink;
+}
+.percent-parents {
+  width: 70%;
+  /* width: 300px; */
+  background-color: green;
+}
+.vh {
+  width: 30vh;
+  height: 30vh;
+  background-color: chocolate;
+}
+.vw {
+  width: 30vw;
+  height: 130vw;
+  background-color: yellow;
+}
+.d-block {
+  /* displat: block; ->div 요소의 default 속성값 */
+  background-color: antiquewhite;
+  border: 1px solid yellow;
+  width: 100px;
+  height: 100px;
+  /* margin: 테두리 바깥 여백 */
+  /* 요소 간의 거리를 둘 수 있음 */
+  /* 만약 마진이 겹치는 경우 더 큰 크기의 margin만큼 여백이 생김 */
+  margin: 10px 20px 30px 40px;
+  margin: 10px 20px;
+  /* padding의 단축속성 */
+  padding: 30px;
+  /* margin 과padding 모두 각 방향에 따로 크기를 부여할 수 있음 */
+  padding-top: 50px;
+}
+.d-inline {
+  /* display: inline; -> span요소의 default 속성값 */
+  /* display: ; */
+  display: block;
+  background-color: lightgray;
+  border: 1px solid darkblue;
+
+  /* line 요소는 컨텐트의 크기에 딱 맞춰 너비와 높이가 지정되므로 
+    width, height 속성 지정 불가 */
+  /* width: 100px;
+    height: 100px;
+    inline의 margin은 좌우만 가능
+    margin과 padding은 실제 레이아웃에 영향을 미치지 않아 레이아웃이 깨질 수 있음
+   */
+  margin: 50px;
+  padding: 30px;
+}
+
+.d-inline-block {
+  /* block 요소처럼 width와 height를 지정할 수 있음 */
+  /* inline 요소처럼 content 크기에 딱 맞도록 기본 크기 자동 지정 */
+  /* inline 요소처럼 수평 정렬 */
+  display: inline-block;
+  border: 1px solid salmon;
+  font-size: 30px;
+  width: 200px;
+  height: 200px;
+}
+.container {
+  width: auto;
+  height: 200px;
+  background-color: orange;
+}
+.container * {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin-right: 30px;
+}
+.html {
+  background-color: skyblue;
+}
+.css {
+  background-color: green;
+}
+.js {
+  background-color: red;
+}
+/* max-width,min-width */
+.parent {
+  width: 500px;
+  height: 200px;
+  background-color: pink;
+}
+.min {
+  /* 최소 넓이이므로 400px 보다 늘어날 수 있지만 줄어들 수 없음 */
+  min-width: 400px;
+  height: 100px;
+  background-color: purple;
+}
+.max {
+  /* 최대 넓이 이므로 400px 보다 줄어들 수 있지만 늘어날 수 없음 */
+  max-width: 400px;
+  height: 100px;
+  background-color: yellowgreen;
+}
+
+/* height 도 마찬가지 */
+/* 하지만 max-width와 min-width, max-height와 min-height는 주로 반응형을 위한 웹 페이지에서 사용되기 때문에 width 기반으로 많이 쓰임 */
+.head {
+  background-color: aqua;
+  height: 130px;
+}
+.calc {
+  width: calc(100vw - 300px);
+  background-color: gold;
+  height: calc(100vh - 130px);
+}
+/* border & border-radius */
+.border {
+  border: 3px solid black;
+  /* border -> 단축속성 */
+  /* 굵기(border-width) 스타일 (border-style), 색상(border-color) */
+  border-width: 1px;
+  border-style: dotted;
+  border-color: red orange yellow green;
+  border-right: 5px solid purple;
+  border-bottom: 5px solid gray;
+}
+.rounded {
+  /* border: none; */
+  height: 80px;
+  width: 150px;
+  border-radius: 40px;
+  border-radius: 5px 10px;
+  border-radius: 20px 0 50px;
+  border-radius: 5px 10px 15x 20px;
+}
+
+/* box sizing */
+/* 요소의 크기 계산 기준을 지정한느 속성 */
+.boxsizing {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border: 15px solid red;
+  background-color: orange;
+}
+.content-box {
+  box-sizing: content-box;
+}
+.border-box {
+  box-sizing: border-box;
+}

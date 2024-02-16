@@ -1,0 +1,24 @@
+* {
+  color: white;
+}
+
+/*태그 선택자*/
+/*태그명 {속성 : 속성값;}*/
+/*태그명 {해당 태그 }*/
+* {
+  background-color: gray;
+}
+
+/*class 선택자*/
+/*html 내에서 해당 class를 가진 요소*/
+/*.클래스명{속성:속성값}*/
+.red {
+  background-color: red;
+}
+
+/*아이디 선택자*/
+/*html 내에서 해당 id를 가진 요소 선택*/
+/*#아이디명 {속성 : 속성값}*/
+#li-orange {
+  background-color: orange;
+}

@@ -1,0 +1,32 @@
+.google {
+  font-family: "Gothic A1", sans-serif;
+}
+,
+.sentence {
+  font-weight: 700;
+  /*글씨체마다 제공되는 font-weight 값이 모두 제각각이기 때문에 모든 값이 적용되는 것은 아님*/
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: line-through;
+}
+/*opacity : 투명도 (0~1사이의 소수점 숫자 작성 )*/
+/*선택된 요소의 컨텐트를 모두 투명도 적용시킴->글자도 적용됨*/
+/*background-color: rgba() 속성을 통해 투명한 배경*/
+.opacity {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-1 {
+  /*완전 불투명*/
+  opacity: 1;
+}

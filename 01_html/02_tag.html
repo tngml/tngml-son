@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag</title>
+</head>
+<body>
+    <h2>오늘의 공부 내용</h2>
+    <p>
+        오늘은 remote repo를 만들어 연결하고,
+        html의 이론을 배웠다. 그리고 지금은 tag에 대해 배우고 있다.
+    </p>
+    <br/> <br/> <br/>
+    <hr/>
+    <h2>오늘의 할 일</h2>
+    <!--ul의 type : disc(default), square, circle, none-->
+    <!--li : ul이나 ol의 안에서 목록을 작성 할 때 사용 -->
+    <ul type="square">
+        <li>html 복습하기</li>
+        <li>재밌게 롤하기</li>
+        <li>잠자기</li>
+    </ul>
+    <!--ol : 순서가 있는 목록-->
+    <!--ol의 type :1(default), a, A, i, I-->
+    <!--ol의 start : 시작 값을 지정-->
+    <!--ol의 reversed : 역순으로 변경-->
+    
+    <ol type="a" start="d"/>
+        <h2>아이스 카페라떼 만들기</h2>
+        <li><strong>우유</strong>를 180ml 컵에 넣습니다.</li>
+        <li><i>얼음</i>을 가득 넣습니다.</li>
+        <li><em>에스프레소 샷</em>을 넣어주면!</li>
+        <li>완성입니다. 맛있게 드세요.</li>
+    </ol>
+
+    <!--목록 중첩-->
+    <ul type="none">
+        <h2>음식 목록</h2>
+        <li>양식
+            <ul>
+                <li>파스타</li>
+                <li>피자
+                    <ul>
+                        <li>치즈 피자</li>
+                        <li>고구마 피자</li>
+                        <li>하와이안 피자</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>중식
+            <ul>
+                <li>짜장면</li>
+                <li>짬뽕</li>
+                <li>볶음밥</li>
+            </ul>
+        </li>
+        <li>일식
+            <ul>
+                <li>스시</li>
+                <li>라멘</li>
+                <li>야끼소바</li>
+            </ul>
+        </li>
+        <li>한식
+            <ul>
+                <li>김치찌개</li>
+                <li>불고기</li>
+            </ul>
+        </li>
+    </ul>
+    <br/> <br/> <br/>
+    <hr/>
+    <!--상대경로 : 지금 위치에서 불러올 이미지까지의 경로-->
+    <img src="./img/스크린샷 2024-01-31 161912.png" alt="럭스 사진/"
+    <!--절대경로 : 홈 위치에서 불러올 이미지까지의 경로-->
+    <img src="/c/Users/sonsu/Desktop/tngml-son/01_html/img" alt="럭스"/>
+    <img 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/800px-The_Blue_Marble_%28remastered%29.jpg"
+    alt="구글에서 가져온 지구 이미지 링크"/>
+    <br/> <br/> <br/>
+    <hr/>
+    <!--a : 하이퍼링크 태그-->
+    <!--a의 herf : 연결할 URL-->
+    <!--a의 target : _blank(새탭으로), _self(default)-->
+    <a href="https://naver.com"title="기본 target 속성의 값은 self">네이버로 이동</a>
+    <a href="https://google.com"target="_blank">구글페이지로 이동</a>
+    <a href="01_start_html.html">폴더 내의 html 파일로 이동 가능</a>
+</body>
+</html>
