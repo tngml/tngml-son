@@ -11,37 +11,91 @@
         display: flex;
         flex-wrap: wrap;
         background-color: beige;
+        align-items: center;
       }
-      .item {
+      .container .item {
         height: 100px;
         width: 100px;
         text-align: center;
         font-size: 30px;
         line-height: 100px;
       }
-      .item1 {
+      .container .item1 {
         background-color: red;
       }
-      .item2 {
+      .container .item2 {
         background-color: orange;
       }
-      .item3 {
+      .container .item3 {
         background-color: yellow;
       }
-      .item4 {
+      .container .item4 {
         background-color: green;
       }
-      .item5 {
+      .container .item5 {
         background-color: blue;
       }
-      .item6 {
+      .container .item6 {
         background-color: darkblue;
       }
-      .item7 {
+      .container .item7 {
         background-color: purple;
       }
-      .item8 {
+      .container .item8 {
         background-color: black;
+      }
+      /*아이템 속성*/
+      .container2 {
+        background-color: #dfdfdf;
+        width: 100%;
+        height: 400px;
+        display: flex;
+      }
+      .container2 .item {
+        width: 50px;
+        height: 50px;
+      }
+      .container2 .item1 {
+        background-color: lightcoral;
+        order: 5;
+      }
+      .container2 .item2 {
+        background-color: lightsalmon;
+        align-self: flex-start;
+      }
+      .container2 .item3 {
+        background-color: lightyellow;
+      }
+      .container2 .item4 {
+        background-color: lightgreen;
+        order: 4;
+      }
+      .container2 .item5 {
+        background-color: lightblue;
+        order: 1;
+      }
+
+      .container2 .item00 {
+        width: 50px;
+        height: 50px;
+      }
+      .container2.item1 {
+        order: 5;
+        background-color: antiquewhite;
+      }
+      .container2.item2 {
+        background-color: skyblue;
+        align-self: flex-start;
+      }
+      .container2.item3 {
+        background-color: greenyellow;
+      }
+      .container2.item4 {
+        background-color: blueviolet;
+      }
+      .container2.item5 {
+        background-color: pink;
+        order: 1;
       }
     </style>
   </head>
@@ -55,6 +109,21 @@
       <div class="item item6">6</div>
       <div class="item item7">7</div>
       <div class="item item8">8</div>
+    </div>
+
+    <hr />
+
+    <div class="container2">
+      <div class="item item1">1</div>
+      <div class="item item2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error non
+        suscipit sunt omnis voluptatibus quidem fugit accusamus similique velit,
+        consectetur dolorum delectus autem maxime qui soluta voluptatum aut,
+        ipsum praesentium?
+      </div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
     </div>
   </body>
 </html>
