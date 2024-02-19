@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>midiaquery</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .media {
+        background-color: pink;
+      }
+
+      .header-mobile {
+        display: none;
+      }
+      .img-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .img-container img {
+        width: 80vw;
+      }
+
+      @media screen and (max-width: 720px) {
+        .header-mobile {
+          display: block;
+        }
+
+        .header-nomal {
+          display: none;
+        }
+      }
+
+      /*화면의 너비가 최대 800px일 때 적용->800px보다 좁을 때 적용 됨*/
+      @media screen and (max-width: 800px) {
+        .media {
+          background-color: gold;
+        }
+      }
+      /*화면의 너비가 최소 1200px일 때 적용-> 1200px 보다 넓을 때 적용 됨*/
+      @media screen and (min-width: 1200px) {
+        .media {
+          background-color: skyblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="media">mediaquery</div>
+
+    <hr />
+    <header class="header-nomal">웹, 테블릿 헤더</header>
+    <header class="header-mobile">모바일 헤더</header>
+
+    <hr />
+    <section class="img-container"></section>
+    <img src="./lux img.png" alt=" 럭스" />
+    <img src="./lux img.png" alt=" 럭스" />
+    <img src="./lux img.png" alt=" 럭스" />
+    <img src="./lux img.png" alt=" 럭스" />
+  </body>
+</html>

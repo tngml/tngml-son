@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: lightblue;
+}
+
+header .inner {
+  position: relative;
+  height: 100%;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+}
+
+header .inner .logo {
+  line-height: 100px;
+  position: absolute;
+  /*i는 font-size로 크기 조정*/
+  font-size: 50px;
+  color: aliceblue;
+}
+.small-menu,
+.menu-bar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .small-menu,
+  .menu-bar {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        background-color: green;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: skyblue;
+        margin: 20px;
+      }
+
+      @media screen and (min-width: 700px) {
+        .container {
+          flex-direction: row;
+        }
+        .box {
+          background-color: black;
+        }
+      }
+
+      @media screen and (min-width: 500px) {
+        body {
+          background-color: skyblue;
+        }
+      }
+      @media screen and (max-width: 300px) {
+        body {
+          background-color: orange;
+        }
+      }
+      @media screen and (min-height: 300px) {
+        p {
+          font-family: "Courier New", Courier, monospace;
+        }
+      }
+      @media screen and (min-height: 500px) {
+        p {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>미디어 쿼리 실습</p>
+    <br />
+    <head>
+      <h2>크기에 따라 자리 바꾸기</h2>
+      <div class="container"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </head>
+  </body>
+</html>
