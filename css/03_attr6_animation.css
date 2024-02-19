@@ -1,0 +1,125 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  position: relative;
+
+  animation-name: my-ani;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+}
+
+/*aniation 사용*/
+/*animation-name: my-ani;
+animation-duration: 5s;
+animation-delay: 0.5s;
+animation-interation-count: 2;
+animation-timing-function: linear;*/
+
+@keyframes my-ani {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 200px;
+  }
+  50% {
+    left: 400px;
+  }
+  75% {
+    left: 200px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.bounce-ball1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 100px;
+  top: 0;
+  border-radius: 50%;
+  background-color: lightblue;
+
+  animation-name: bounce1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  /* animation-direction:alternate-> 애니메이션이 더 자연스럽게 연결될 수 있도록 함
+  */
+
+  /*단축 프로퍼티*/
+  /*animation: name duration timing-function delay iteration-count direction */
+  animation: bounce1 1s ease-in infinite alternate;
+}
+
+@keyframese bounce1 {
+  to {
+    top: 0px;
+  }
+  form {
+    top: 300px;
+  }
+}
+
+.bounce-ball2 {
+  width: 50px;
+  height: 50px;
+  background-color: lightcoral;
+  position: relative;
+  border-radius: 50%;
+
+  animation-name: bounce2;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+@keyframes bounce2 {
+  from,
+  to {
+    bottom: 0;
+    animation-timing-function: ease-out;
+    /*0px에서 정상 속도로 시작해, 천천히 속도를 줄이면서 300px이 됨*/
+    width: 60px;
+  }
+  50% {
+    width: 100px;
+    bottom: 300px;
+    animation-timing-function: ease-in;
+    /*300px에서 천천히 시작해, 0px로 가면서 정상 속도로 끝남*/
+  }
+}
+
+.bounce-ball3 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: relative;
+  border-radius: 50%;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes bounce3 {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 200px;
+  }
+  50% {
+    left: 400px;
+  }
+  75% {
+    left: 200px;
+  }
+  100% {
+    left: 0;
+  }
+}

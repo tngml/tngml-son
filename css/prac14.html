@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation 실습</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+
+        /*참고) 배경색 그라데이션 및 그림자 적용*/
+        background: linear-gradient(45deg, yellow, orange, 70%, orangered);
+        box-shadow: -5px 5px 10px inset rgba(51, 51, 51, 0.5);
+
+        animation: ball 10s linear infinite;
+      }
+
+      @keyframes ball {
+        0% {
+          transform: translate(0px);
+        }
+        25% {
+          transform: translate(calc(100vw - 100px), 0px);
+        }
+        50% {
+          transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+        }
+        75% {
+          transform: translate(0, calc(100vh - 100px));
+        }
+        100% {
+          transform: translate(0px);
+        }
+      }
+
+      p {
+        animation: hi 3s infinite;
+      }
+
+      @keyfram hi {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+        to {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="circle"></div>
+    <h2>글씨 만들기</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
+      aperiam magnam error non corporis laboriosam velit maxime, porro quasi
+      fugiat magni ipsam beatae delectus mollitia blanditiis amet corrupti
+      quaerat facilis.
+    </p>
+  </body>
+</html>
