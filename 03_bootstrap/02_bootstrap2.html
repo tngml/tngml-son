@@ -184,5 +184,199 @@
         </div>
       </div>
     </div>
+
+    <!--badge-->
+    <h2>badge</h2>
+    <div>아메리카노<span class="badge text-bg-primary">New!</span></div>
+    <span class="badge text-bg-primary">New!</span>
+    <span class="badge text-bg-secondary">Secondary</span>
+    <span class="badge text-bg-success">Success</span>
+    <span class="badge text-bg-danger">Danger</span>
+    <span class="badge text-bg-warning">Warning</span>
+    <span class="badge text-bg-info">Info</span>
+    <span class="badge text-bg-light">Light</span>
+    <span class="badge text-bg-dark">Dark</span>
+    <br />
+    <button type="button" class="btn btn-primary position-relative">
+      알림
+      <span
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+      >
+        1
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </button>
+
+    <!--card-->
+    <!--section(d-flex)-->
+    <h2>card</h2>
+    <div class="card" style="width: 18rem">
+      <img src="./img/beach1.jpg" class="card-img-top" alt="럭스" />
+      <div class="card-body">
+        <h5 class="card-title">도자기 텀블러</h5>
+        <p class="card-text">
+          가지고 다니면 깨질 위험이 매우 높은 세상에 없는 센세이셔널한 텀블러
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <br />
+    <!--carousel-->
+    <!--data-bs-ride="carouwel" data-bs-interval=""
+     data-bs-ride="carousel"
+      data-bs-interval="30"-->
+    <h2>carousel</h2>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/beach1.jpg" class="d-block w-100" alt="1" />
+        </div>
+        <div class="carousel-item">
+          <img src="./img/beach2.jpg" class="d-block w-100" alt="2" />
+        </div>
+        <div class="carousel-item">
+          <img src="./img/beach3.jpg" class="d-block w-100" alt="3" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br />
+    <br />
+    <!--offcanvas(슬라이드 메뉴 같은 것)-->
+    <h2>offcanvas</h2>
+    <a
+      class="btn btn-primary"
+      data-bs-toggle="offcanvas"
+      href="#offcanvasExample"
+      role="button"
+      aria-controls="offcanvasExample"
+    >
+      Link with href
+    </a>
+    <button
+      class="btn btn-primary"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample"
+      aria-controls="offcanvasExample"
+    >
+      Button with data-bs-target
+    </button>
+
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>내용 작성하기</div>
+        <div>내용 작성하기</div>
+        <div>내용 작성하기</div>
+        <div>내용 작성하기</div>
+        <div class="dropdown mt-3">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!--navbar-->
+    <h2>navbar</h2>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
