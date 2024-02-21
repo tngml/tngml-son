@@ -26,9 +26,18 @@ header .inner {
 header .inner .logo {
   line-height: 100px;
   position: absolute;
-  /*i는 font-size로 크기 조정*/
+  /* i는 font-size로 크기 조정 */
   font-size: 50px;
   color: aliceblue;
+}
+header .inner .menu {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .inner .menu li {
+  margin-right: 20px;
 }
 .small-menu,
 .menu-bar {
@@ -40,7 +49,31 @@ header .inner .logo {
   .menu-bar {
     display: block;
   }
-  .menu {
+  header .inner .logo {
+    left: calc(50% - 25px);
+  }
+  header .menu-bar {
+    position: absolute;
+    font-size: 30px;
+    line-height: 100px;
+    right: 5%;
+  }
+  header .small-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  header .small-menu li {
+    background-color: aliceblue;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+  }
+  header .small-menu li:hover {
+    background-color: blue;
+    color: white;
+  }
+  header .inner .menu {
     display: none;
   }
 }

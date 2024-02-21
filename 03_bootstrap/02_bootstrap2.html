@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>conponents</h1>
+
+    <h2>button</h2>
+    <button type="button" class="btn btn-primary">primary</button>
+    <button type="button" class="btn btn-secondary">secondary</button>
+    <button type="button" class="btn btn-success">success</button>
+    <button type="button" class="btn btn-danger">danger</button>
+    <button type="button" class="btn btn-warning">warning</button>
+    <button type="button" class="btn btn-info">info</button>
+    <button type="button" class="btn btn-light">light</button>
+    <button type="button" class="btn btn-dark">dark</button>
+    <button type="button" class="btn btn-link">link</button>
+
+    <!--outline-->
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-light">Light</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+    <br />
+    <br />
+
+    <!-- collapse -->
+    <h2>collapse</h2>
+    <!-- 수평, 수직으로 열리는 방식이 있음 -->
+    <!-- 수직 -->
+    <p>
+      <a
+        class="btn btn-primary"
+        data-bs-toggle="collapse"
+        href="#"
+        role="button"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Link with href
+      </a>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Button with data-bs-target
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        Some placeholder content for the collapse component. This panel is
+        hidden by default but revealed when the user activates the relevant
+        trigger.
+      </div>
+    </div>
+    <!--수평-->
+    <p>
+      <!--aria-xx란?
+        -접두사가 aria인 특성은 **접근성**이나**스크린 리더**와 관련 있음
+        -aria-expanded="true" : 숨김 
+        -aria-label="Close": 스크린 리더가 label을 close를 갖도록 함
+        -role="alert" : 스크린 리더에게 중요한 정보라는 것을 표시
+        -->
+
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseWidthExample"
+        aria-expanded="false"
+        aria-controls="collapseWidthExample"
+      >
+        Toggle width collapse
+      </button>
+    </p>
+    <div style="min-height: 120px">
+      <div class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="card card-body" style="width: 300px">
+          This is some placeholder content for a horizontal collapse. It's
+          hidden by default and shown when triggered.
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+
+    <!--accordian-->
+    <h2>accordion</h2>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Accordion Item #1
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is
+            shown by default, until the collapse plugin adds the appropriate
+            classes that we use to style each element. These classes control the
+            overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It's also worth noting that just
+            about any HTML can go within the <code>.accordion-body</code>,
+            though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            이렇게 따라해주세용!
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">요로케 조로케!</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            아이템의 갯수를 늘리고 싶다면?
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            .accordion-item 요소를 더 추가해주세요
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
