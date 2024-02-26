@@ -91,7 +91,7 @@ if (age >= 20) {
 }*/
 
 //다른 방법
-/*if (age >= 0 && age < 8) {
+/*if (age <= 0 && age < 8) {
     //age기 0보다 크거나 같으면서 8보다 작은 경우
   console.log("유아");
 }else if (age<14){
@@ -112,12 +112,16 @@ if (age >= 20) {
 }..나머지 코드*/
 
 console.log("--------------------------------");
-//조건문 중ㅇ첩하기
+//조건문 중첩하기
 //조건문 안에 조건문 작성 가능
 const userId = "user01";
 const userPw = "1234qwer";
 
 //조건문 함수로 구현
+/**
+// JS DOC
+ * 입력받은 아이디와 비밀번호가 맞는지 확인 후 적절한 알림창 띄움
+ */
 function loginUser() {
   const inputId = prompt("아이디를 입력해주세요.");
   const inputPw = prompt("비밀번호를 입력해주세요.");
@@ -137,3 +141,106 @@ function loginUser() {
 }
 
 loginUser();
+
+//loginUser()
+
+//switch문
+//switch의 괄호 안과 case의 조건으로 비교식이 들어갈 수 없음
+/*
+1. 변수 x의 값과 첫 번째 case문의 값 3을 비교
+2. 두 값이 동일하다면 :(콜론) 뒤의 코드가 실행
+3. break문을 통해 해당 스코프에서 빠져나옴
+4. 만약 첫 번째 case문의 값과 x가 다르다면 다음 case 문의 값과 비교
+5. 모든 case문의 값과 x의 값이 다르다면 default문 다음의 코드가 실행 
+*/
+//break는 필수 작성
+//default문 생략 가능
+
+let x = 5;
+
+//switch문의 괄호 안에는 조건이 아닌 값이 들어감
+//case에도 조건이 아닌 값을 작성
+switch (x) {
+  case 3:
+    console.log("x는 3입니다.");
+    break;
+  case 4:
+    console.log("x는 4입니다.");
+    //break 작성하지 않으면 case 4를 실행하고 싶을 때 case 5 까지 모두 실행됨
+    //해당 스코프를 빠져나가지 못하는 것
+    //원하는 코드가 실행된 이후 꼭 break 사용해 스코프를 빠져나올 수 있도록 작성
+    break;
+  case 5:
+    console.log("x는 5입니다.");
+    break;
+  default:
+    console.log("x는 3,4,5가 아닌 다른 값입니다.");
+}
+
+//if문으로 작성한 성적 계산하는 프로그램 switch문 사용하도록 수정
+/**switch (number) {
+  case 100:
+    console.log("A");
+    break;
+  case 90:
+    console.log("B");
+}*/
+//위처럼 작성하는 경우 100,90,... 이런 값이 아니면 원하는 동작을 하지 않음
+//이럴 땐 점수를 10으로 나눈 몫을 찾아와 number로 전달, case 값도 변경
+
+number = 99;
+switch (parseInt(number / 10)) {
+  case 10:
+  case 9:
+    console.log("A");
+    break;
+  case 8:
+    console.log("B");
+    break;
+  case 7:
+    console.log("C");
+    break;
+  case 6:
+    console.log("D");
+    break;
+  default:
+    console.log("F");
+    break;
+}
+
+// 삼항연산자
+// 조건식 ? 조건이 참 일때 실행될 코드 : 조건이 거짓일 때 실행될 코드
+
+// 홀수, 짝수 판별하기
+let num = 5;
+if (num % 2 === 1) {
+  console.log("홀수");
+} else {
+  console.log("짝수");
+}
+
+// 삼항연산자로 변환
+let result = num % 2 === 1 ? "홀수" : "짝수";
+console.log(result);
+
+let fruit = "banana";
+console.log(fruit === "banana" ? "바나나" : "바나나가 아닙니다.");
+
+let isLoggedIn = true;
+isLoggedIn === true
+  ? console.log("로그인 유저입니다.")
+  : console.log("로그인하지 않은 유저입니다.");
+
+isLoggedIn === true
+  ? number > 10
+    ? "로그인한 유저인데, number 값이 10보다 큼"
+    : "로그인한 유저인데, number 값이 10보다 작음"
+  : "로그인하지 않은 유저";
+
+// 실습 오전 / 오후 출력하기
+let now = new Date().getHours();
+console.log(now);
+
+console.log(now < 12 ? "오전" : "오후");
+
+//
