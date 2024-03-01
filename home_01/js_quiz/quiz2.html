@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>js_quiz 2번</title>
+    <title>js_quiz3. 2번</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,57 +36,52 @@
     </style>
   </head>
   <body>
-    <h1>퀴즈2. 수업이 끝났나요?</h1>
-    <div>
-      * HTML의 script 태그 안에 미리 구조가 정의되어 있는 함수를 조건에 맞게
-      수정해주세요!
-    </div>
+    <h1>퀴즈2. 매개변수로 들어온 값을 N회 출력하기</h1>
     <ul>
       <li>
-        <code>isDone()</code>함수는
-        <b>16시가 되어 수업이 끝났는지를 출력</b>하는 함수이다.
-      </li>
-      <li><code>isDone()</code>함수 <code>time</code>을 매개변수로 갖는다.</li>
-      <li>
-        만약, 매개변수(인자) <code>time</code> 값이
-        <b>16 이상이라면 <code>true</code>를 반환</b>하고,
+        <code>printMsg()</code>함수는 <code>msg</code>와
+        <code>count</code>매개변수를 갖는다.
       </li>
       <li>
-        그렇지 않다면, <b><code>false</code>를 반환</b>한다.
+        <code>printMsg()</code>함수는
+        <b
+          ><code>msg</code>에 들어온 값을 <code>count</code> 숫자만큼 반복
+          출력</b
+        >하는 함수이다.
+      </li>
+      <li>
+        단, 함수는 <code>msg</code>에 들어올 string(문자열) 메세지를
+        <b>대문자로 변환하여 출력</b>한다.
+      </li>
+      <li>
+        (힌트) 문자열에서 사용 가능한 함수(메서드)
+        <code>.toUpperCase()</code>는 문자열의 글자를 모두
+        <strong>대문자로 변환</strong>해 반환합니다.<br />즉,
+        'string'.toUpperCase()는 'STRING'이 됩니다.
+        <br />
+        <a
+          target="_blank"
+          href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase"
+          >MDN 사이드 이동</a
+        >
       </li>
       <li>
         함수 호출 예시:
-        <img src="./image/img3.png" alt="보기" />
+        <img src="./image/quiz2.png" alt="보기" />
       </li>
     </ul>
-    <p>
-      (힌트) 만약 ~ 그렇지 않다면 ~ 같은 단어에 해당하는 자바스크립트 키워드를
-      생각해보세요!
-    </p>
 
     <script>
-      function isDone(time) {
-        return time >= 16;
-        // TODO: 조건을 만족하는 isDone 함수를 작성해주세요.
-      }
-      console.log(isDone(9)); // false
-      console.log(isDone(14)); // false
-      console.log(isDone(16)); // true
-      console.log(isDone(20)); // true
-
-      // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 isDone 함수를 호출해주세요!
-      // isDone(9);
-      // isDone(14);
-      // isDone(16);
-      // isDone(20);
-
-      /*function isDone(time){
-        if(time >=16){
-          return=true;
-        }else{
-          return false;
+      function printMsg(msg, count) {
+        for (let i = 0; i < count; i++) {
+          console.log(msg.toUpperCase());
         }
-        */
+        // TODO: 반복문을 사용해서 함수 내부 코드를 개선해주세요!
+      }
+      printMsg("Wow!!", 5);
+
+      // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 printMsg 함수를 호출해주세요!
+      // printMsg('Wow!!', 5);
     </script>
   </body>
 </html>

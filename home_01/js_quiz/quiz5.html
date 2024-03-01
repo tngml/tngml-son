@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>js_quiz 4번</title>
+    <title>js_quiz3. 5번</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
         padding: 2px;
         border-radius: 3px;
         background-color: #ededed;
-        font-family: "Noto Sans Mono", monospace;
+        font-family: 'Noto Sans Mono', monospace;
         font-weight: 500;
       }
 
@@ -36,65 +36,95 @@
     </style>
   </head>
   <body>
-    <h1>퀴즈4. 주사위 숫자의 합이 4의 배수인지 판별하기</h1>
-    <div>
-      * HTML의 script 태그 안에 미리 구조가 정의되어 있는 함수를 조건에 맞게
-      수정해주세요!
-    </div>
+    <h1>퀴즈5. 별 그리기</h1>
     <ul>
       <li>
-        <code>diceNumber()</code>함수는 <code>first</code>와
-        <code>second</code>라는 숫자 매개변수를 갖는다.
+        <code>drawsStars()</code> ~ <code>drawsStars5()</code>까지의 모든
+        함수들은 <code>lines</code>라는 매개변수를 갖는다. 예를 들어
+        <code>drawsStars(5);</code> 를 호출하면 특정 규칙에 따라 5줄의 별이
+        그려진다.
+      </li>
+      <li>출력 예시처럼 보일 수 있도록 함수를 내부 코드를 작성해주세요.</li>
+      <p>
+        (힌트) 함수마다 각 반복 회차별로
+        <strong>'*' 문자와 ' ' 문자(공백 문자)의 규칙성</strong>을 찾아보세요!
+        <br /><br />
+        (힌트) 문자열에서 사용 가능한 함수(메서드)는 <code>repeat(n)</code>은
+        문자열을 n회 반복한 새로운 문자열을 반환합니다. (여기서 <code>n</code>은
+        0과 양의 정수입니다. 즉, <code>repeat(-1)</code> 코드는 인자 값이
+        음수이므로 error 가 발생해요)
+        <a
+          target="_blank"
+          href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/repeat"
+          >MDN 사이드 이동</a
+        ><br /><br />
+        <img src="./image/repeat_ex.png" alt="예시" /><br />
+      </p>
+      <li>
+        <code>drawStars()</code>함수 호출 결과는 다음과 같습니다.<br />
+        <img src="./image/quiz5-1.png" alt="출력 결과" width="500" />
       </li>
       <li>
-        <code>diceNumber()</code>함수는 <code>first</code>와
-        <code>second</code> 합이 <b>4의 배수인지 판별하는 함수</b>이다.
+        <code>drawStars<strong>2</strong>()</code>함수 호출 결과는 다음과
+        같습니다.<br />
+        <img src="./image/quiz5-2.png" alt="출력 결과" width="500" />
       </li>
       <li>
-        만약, <code>first</code>와 <code>second</code> 모두 자료형이
-        숫자(number)라면 4의 배수인지 판별한다.
-      </li>
-      <ul>
-        <li>
-          만약, <code>first</code>와 <code>second</code> 합이 4의 배수라면
-          <b>"4의 배수"</b>를 출력하고
-        </li>
-        <li>합이 4의 배수가 아니라면 <b>"4의 배수 아님"</b>을 출력한다.</li>
-      </ul>
-      <li>
-        <code>first</code>와 <code>second</code> 둘 중 하나라도 자료형이
-        숫자(number)가 아니라면 <b>"Not a Number"</b>를 출력한다.
+        <code>drawStars<strong>3</strong>()</code>함수 호출 결과는 다음과
+        같습니다.<br />
+        <img src="./image/quiz5-3.png" alt="출력 결과" width="500" />
       </li>
       <li>
-        함수 호출 예시:
-        <img src="./image/img6.png" alt="보기" />
+        <code>drawStars<strong>4</strong>()</code>함수 호출 결과는 다음과
+        같습니다. <code>drawStars<strong>4</strong>()</code>함수의 경우,
+        <code>lines</code> 매개변수의 값이
+        <strong>3이라면 5줄, 4라면 7줄, 5라면 9줄</strong> ...을 출력합니다.<br />
+        <img src="./image/quiz5-4.png" alt="출력 결과" width="500" />
+      </li>
+      <li>
+        <code>drawStars<strong>5</strong>()</code>함수 호출 결과는 다음과
+        같습니다.<br />
+        <img src="./image/quiz5-5.png" alt="출력 결과" width="500" />
       </li>
     </ul>
-    <p>(힌트) 조건이 중첩되어 있습니다!</p>
+    <br />
 
     <script>
-      function diceNumber(first, second) {
-        // TODO: 조건을 만족하는 diceNumber 함수를 완성해주세요.
-        if (typeof first !== "number" || typeof second !== "number") {
-          return "Not a Number";
-        }
-        const sum = first + second;
-        if (sum % 4 === 0) {
-          return "4의 배수";
-        } else {
-          return "4의 배수가 아님";
-        }
+      function drawStars() {
+        // TODO: drawStars() 함수 내부 코드를 채워주세요.
       }
-      console.log(diceNumber(1, 2));
-      console.log(diceNumber(5, 3));
-      console.log(diceNumber("a", "2"));
-      console.log(diceNumber(1, "5"));
 
-      // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 diceNumber 함수를 호출해주세요!
-      // diceNumber(1, 2);
-      // diceNumber(5, 3);
-      // diceNumber('a', '2');
-      // diceNumber(1, '5');
+      function drawStars2() {
+        // TODO: drawStars2() 함수 내부 코드를 채워주세요.
+      }
+
+      function drawStars3() {
+        // TODO: drawStars3() 함수 내부 코드를 채워주세요.
+      }
+
+      function drawStars4() {
+        // TODO: drawStars4() 함수 내부 코드를 채워주세요.
+      }
+
+      function drawStars5() {
+        // TODO: drawStars5() 함수 내부 코드를 채워주세요.
+      }
+
+      // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 drawStars ~ drawStars5 함수를 호출해주세요!
+      // drawStars(3);
+      // drawStars(5);
+
+      // drawStars2(3);
+      // drawStars2(5);
+
+      // drawStars3(3);
+      // drawStars3(5);
+
+      // drawStars4(3);
+      // drawStars4(5);
+
+      // drawStars5(3);
+      // drawStars5(5);
     </script>
   </body>
 </html>
