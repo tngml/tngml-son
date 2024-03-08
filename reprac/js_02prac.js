@@ -45,3 +45,5 @@ function abcd(abc1, abc2) {
   console.log("inner:" + result);
 }
 abcd(10, 20);
+
+add;
