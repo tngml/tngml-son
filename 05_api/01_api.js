@@ -238,9 +238,7 @@ async function getMovieData() {
 
   //fetch로 데이터 불러오기
   //response 변수에는 서버에서 받아온 데이터가 저장됨
-  const response = await fetch(
-    `http://www.omdbapi.com/?i=tt3896198&apikey=9e985e9b&s=${word}`
-  );
+  const response = await fetch(`&s=${word}`);
   const movieData = await response.json();
   const ul = document.querySelector("ul");
 
