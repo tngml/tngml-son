@@ -82,6 +82,7 @@ function displayProducts(products) {
     `;
     productElement.addEventListener("click", () => {
       window.location.href = `detail.html?id=${product.id}`;
+      //쿼리스트링을 사용해
     });
 
     productList.append(productElement);

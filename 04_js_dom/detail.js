@@ -82,3 +82,15 @@ const product = products.find((p) => {
 console.log(product);
 
 //찾은 상품을 브라우저에 보여주기
+const productDetail = document.querySelector("#product-detail");
+
+if (product) {
+  productDetail.innerHTML = `
+  <img src="${product.image}" alt="${product.name}" />
+  <h2>${product.name}</h2>
+  <p>가격: ${product.price}원</p>
+  <p>${product.description}</p>
+  `;
+} else {
+  productDetail.innerHTML = "<p>해당하는 상품이 없습니다.</p>";
+}

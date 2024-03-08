@@ -173,67 +173,74 @@ for (let i = 1; i <= 10; i++) {
   console.log(i);
 }
 
+// //1분 퀴즈
+// let sum1 = 0;
+// for (let i = 1; i <= 100; i++) {
+//   sum1 += i;
+// }
+// console.log(sum1);
+
+// //퀴즈 2. 반복문을 사용해 1부터 200까지의 합을 출력하는 코드
+// let sum2 = 0;
+// for (let i = 1; i <= 200; i++) {
+//   sum2 += i;
+// }
+// console.log(sum2);
+
+// //퀴즈 3. 반복문을 사용해 1부터 100에서 짝수의 합만 출력하는 코드
+// let sum3 = 0;
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 2 === 0) {
+//     sum3 += i;
+//   }
+// }
+// console.log(sum3);
+
+// //퀴즈 4. 반복문을 사용해 1부터 100에서 홀수의 합만 출력하는 코드
+// let sum5 = 0;
+// for (i = 1; i <= 100; i++) {
+//   if (i % 2 === 1) {
+//     sum5 += i;
+//   }
+// }
+// console.log(sum5);
+// //퀴즈5. 숫자1부터 999까지 짝수가 몇 개인지 출력하는 코드
+// let count = 0;
+// for (i = 1; i <= 999; i++) {
+//   if (i % 2 === 0) count++;
+// }
+// console.log(`짝수의 개수는 ${count}개 입니다.`);
+
+// //퀴즈 6. 숫자1부터 999까지 홀수가 몇 개인지 출력하는 코드
+// let count1 = 0;
+// for (i = 0; i <= 999; i++) {
+//   if (i % 2 === 1) count1++;
+// }
+// console.log(`홀수의 개수는 ${count1}개 입니다.`);
+
+// //퀴즈7. 구구단 1단부터 9단까지 한 번에 출력하는 코드
+// for (let dan = 1; dan <= 9; dan++) {
+//   for (let dan1 = 1; dan1 <= 9; dan1++) {
+//     console.log(`${dan}*${dan1}=${dan * dan1}`);
+//   }
+// }
+
+// //퀴즈 8. 100부터 999까지 정수 중에서 암스트롱 수에 해당하는 숫자를 모두 출력하는 코드
+// for (let i = 1; i < 10; i++) {
+//   for (let k = 0; k < 10; k++) {
+//     for (let j = 0; j < 10; j++) {
+//       let sum6 = i * i * i + k * k * k + j * j * j;
+//       let currentNumber = i * 100 + k * 10 + j;
+//       if (sum6 === currentNumber) {
+//         console.log(currentNumber);
+//       }
+//     }
+//   }
+// }
 //1분 퀴즈
-let sum1 = 0;
-for (let i = 1; i <= 100; i++) {
-  sum1 += i;
+//숫자1부터 999까지 짝수가 몇 개 인지 출력하는 코드
+let sum7 = 0;
+for (let i = 1; i <= 999; i++) {
+  if (i % 2 === 0) sum7++;
 }
-console.log(sum1);
-
-//퀴즈 2. 반복문을 사용해 1부터 200까지의 합을 출력하는 코드
-let sum2 = 0;
-for (let i = 1; i <= 200; i++) {
-  sum2 += i;
-}
-console.log(sum2);
-
-//퀴즈 3. 반복문을 사용해 1부터 100에서 짝수의 합만 출력하는 코드
-let sum3 = 0;
-for (let i = 1; i <= 100; i++) {
-  if (i % 2 === 0) {
-    sum3 += i;
-  }
-}
-console.log(sum3);
-
-//퀴즈 4. 반복문을 사용해 1부터 100에서 홀수의 합만 출력하는 코드
-let sum5 = 0;
-for (i = 1; i <= 100; i++) {
-  if (i % 2 === 1) {
-    sum5 += i;
-  }
-}
-console.log(sum5);
-//퀴즈5. 숫자1부터 999까지 짝수가 몇 개인지 출력하는 코드
-let count = 0;
-for (i = 1; i <= 999; i++) {
-  if (i % 2 === 0) count++;
-}
-console.log(`짝수의 개수는 ${count}개 입니다.`);
-
-//퀴즈 6. 숫자1부터 999까지 홀수가 몇 개인지 출력하는 코드
-let count1 = 0;
-for (i = 0; i <= 999; i++) {
-  if (i % 2 === 1) count1++;
-}
-console.log(`홀수의 개수는 ${count1}개 입니다.`);
-
-//퀴즈7. 구구단 1단부터 9단까지 한 번에 출력하는 코드
-for (let dan = 1; dan <= 9; dan++) {
-  for (let dan1 = 1; dan1 <= 9; dan1++) {
-    console.log(`${dan}*${dan1}=${dan * dan1}`);
-  }
-}
-
-//퀴즈 8. 100부터 999까지 정수 중에서 암스트롱 수에 해당하는 숫자를 모두 출력하는 코드
-for (let i = 1; i < 10; i++) {
-  for (let k = 0; k < 10; k++) {
-    for (let j = 0; j < 10; j++) {
-      let sum6 = i * i * i + k * k * k + j * j * j;
-      let currentNumber = i * 100 + k * 10 + j;
-      if (sum6 === currentNumber) {
-        console.log(currentNumber);
-      }
-    }
-  }
-}
+console.log(sum7);
