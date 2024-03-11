@@ -3,13 +3,13 @@
 function consoleName(name) {
   console.log(`당신의 이름은 ${name}`);
 }
-export { consoleName };
+// export { consoleName };
 
-function consoleName2(name) {
-  console.log(`당신의 이름은 ${name}`, 222);
-}
-export { consoleName };
+// function consoleName2(name) {
+//   console.log(`당신의 이름은 ${name}`, 222);
+// }
+// export { consoleName };
 
-export default function consoleNameMain(name) {
-  console.log();
-}
+// export default function consoleNameMain(name) {
+//   console.log();
+// }
