@@ -30,5 +30,5 @@ $("#peaches").click((event) => {
 // //$('.btn).click((e) => {
 //   const imgName = $(e.target).attr('id');
 //console.log(imgName);
-//$('fruit').attr('src',`./image/${imgName}.jpg)
+//$('fruit').attr('src',`./image/${imgName}.jpg);
 // }
