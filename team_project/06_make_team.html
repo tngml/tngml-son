@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페로</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 50px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .video-container {
+        flex: 1;
+        margin-right: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      .video {
+        width: 100%;
+      }
+
+      .recommendations {
+        flex: 1;
+        margin-left: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        max-height: 600px;
+        padding: 20px;
+      }
+
+      .chat-container {
+        width: 100%;
+        margin-top: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+      }
+
+      .chat-input {
+        width: calc(100% - 120px);
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+
+      .send-btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="video-container">
+        <iframe
+          class="video"
+          width="100%"
+          height="600"
+          src=""
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="recommendations">
+        <h2>추천 동영상</h2>
+        <ul>
+          <li><a href="#">동영상 제목 1</a></li>
+          <li><a href="#">동영상 제목 2</a></li>
+          <li><a href="#">동영상 제목 3</a></li>
+          <li><a href="#">동영상 제목 4</a></li>
+          <li><a href="#">동영상 제목 5</a></li>
+          <li><a href="#">동영상 제목 6</a></li>
+          <li><a href="#">동영상 제목 7</a></li>
+          <li><a href="#">동영상 제목 8</a></li>
+          <li><a href="#">동영상 제목 9</a></li>
+          <li><a href="#">동영상 제목 10</a></li>
+        </ul>
+      </div>
+      <div class="chat-container">
+        <h2>채팅</h2>
+        <div id="chat-messages"></div>
+        <div>
+          <input
+            type="text"
+            id="chat-input"
+            class="chat-input"
+            placeholder="채팅을 입력하세요..."
+          />
+          <button id="send-btn" class="send-btn">전송</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 채팅 전송 버튼 클릭 이벤트 처리
+      document
+        .getElementById("send-btn")
+        .addEventListener("click", function () {
+          var messageInput = document.getElementById("chat-input");
+          var message = messageInput.value.trim();
+
+          if (message !== "") {
+            var chatMessages = document.getElementById("chat-messages");
+            var messageElement = document.createElement("div");
+            messageElement.textContent = message;
+            chatMessages.appendChild(messageElement);
+
+            // 입력창 비우기
+            messageInput.value = "";
+
+            // 채팅창 맨 아래로 스크롤
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+          }
+        });
+    </script>
+  </body>
+</html>

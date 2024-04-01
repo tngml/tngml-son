@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신규 카페 등록</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>신규 카페 등록</h1>
+      <label for="cafe-name">카페 이름:</label>
+      <input type="text" id="cafe-name" name="cafe-name" required />
+
+      <div class="input-group">
+        <label for="floor">(필수) 카페 층 수를 입력해 주세요.</label>
+        <div>
+          <input type="button" id="minus-floor" value="-" />
+          <input type="number" id="floor" value="1" min="1" />
+          <input type="button" id="plus-floor" value="+" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="outlet-rate"
+          >(필수)테이블당 사용할 수 있는 콘센트 갯수를 입력해주세요.</label
+        >
+        <div>
+          <input type="button" id="minus-floor" value="-" />
+          <input type="number" id="floor" value="1" min="1" />
+          <input type="button" id="plus-floor" value="+" />
+        </div>
+      </div>
+      <label>영업시간:</label>
+      <div class="button-group">
+        <input type="button" class="day-button" value="월요일" id="monday" />
+        <input type="button" class="day-button" value="화요일" id="tuesday" />
+        <input type="button" class="day-button" value="수요일" id="wednesday" />
+        <input type="button" class="day-button" value="목요일" id="thursday" />
+        <input type="button" class="day-button" value="금요일" id="friday" />
+        <input type="button" class="day-button" value="토요일" id="saturday" />
+        <input type="button" class="day-button" value="일요일" id="sunday" />
+      </div>
+      <textarea id="opening-hours" name="opening-hours" rows="4" required>
+월요일: 09:00 ~ 22:00
+    화요일: 09:00 ~ 22:00
+    수요일: 09:00 ~ 22:00
+    목요일: 09:00 ~ 22:00
+    금요일: 09:00 ~ 22:00
+    토요일: 09:00 ~ 22:00
+    일요일: 09:00 ~ 22:00</textarea
+      >
+    </div>
+  </body>
+</html>

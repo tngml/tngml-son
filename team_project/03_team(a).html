@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페 등록 요청</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+
+      select {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+
+      input[type="button"] {
+        padding: 10px 20px;
+        background-color: #f07579;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      input[type="button"]:hover {
+        background-color: #d14a4f;
+      }
+
+      #map {
+        height: 400px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>카페 등록 요청</h1>
+      <label for="cafe-name">카페이름:</label>
+      <input type="text" id="cafe-name" name="cafe-name" required />
+
+      <label for="cafe-location">카페 위치:</label>
+      <input type="text" id="cafe-location" name="cafe-location" required />
+
+      <div id="map"></div>
+      <input
+        type="text"
+        id="cafe-search"
+        placeholder="카페 이름을 입력하세요"
+      />
+      <button onclick="searchCafe()">검색</button>
+
+      <label for="floor">카페 층 수:</label>
+      <input type="number" id="floor" name="floor" value="1" min="1" required />
+
+      <label for="outlet-rate">콘센트 보급율:</label>
+      <input
+        type="number"
+        id="outlet-rate"
+        name="outlet-rate"
+        min="0"
+        max="100"
+        required
+      />
+      %
+
+      <label>영업시간:</label>
+      <div class="button-group">
+        <input
+          type="button"
+          class="day-button"
+          value="월요일"
+          id="monday"
+          onclick="toggleOpeningHours('monday')"
+        />
+        <input
+          type="button"
+          class="day-button"
+          value="화요일"
+          id="tuesday"
+          onclick="toggleOpeningHours('tuesday')"
+        />
+        <input
+          type="button"
+          class="day-button"
+          value="수요일"
+          id="wednesday"
+          onclick="toggleOpeningHours('wednesday')"
+        />
+        <input
+          type="button"
+          class="day-button"
+          value="목요일"
+          id="thursday"
+          onclick="toggleOpeningHours('thursday')"
+        />
+        <input
+          type="button"
+          class="day-button"
+          value="금요일"
+          id="friday"
+          onclick="toggleOpeningHours('friday')"
+        />
+        <input
+          type="button"
+          class="day-button"
+          value="토요일"
+          id="saturday"
+          onclick="toggleOpeningHours('saturday')"
+        />
+        <input
+          type="button"
+          class="day-button"
+          value="일요일"
+          id="sunday"
+          onclick="toggleOpeningHours('sunday')"
+        />
+      </div>
+      <textarea id="opening-hours" name="opening-hours" rows="4" required>
+월요일: 09:00 ~ 22:00
+화요일: 09:00 ~ 22:00
+수요일: 09:00 ~ 22:00
+목요일: 09:00 ~ 22:00
+금요일: 09:00 ~ 22:00
+토요일: 09:00 ~ 22:00
+일요일: 09:00 ~ 22:00</textarea
+      >
+
+      <label for="other-info">기타 정보:</label>
+      <textarea id="other-info" name="other-info" rows="4"></textarea>
+
+      <label for="reason">카페를 등록하고 싶은 이유:</label>
+      <textarea id="reason" name="reason" rows="4" required></textarea>
+
+      <button onclick="submitRequest()">등록 요청하기</button>
+    </div>
+
+    <script>
+      function initMap() {
+        // 서울을 중심으로 초기화
+        var seoul = { lat: 37.5665, lng: 126.978 };
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: seoul,
+        });
+
+        // 검색 기능 추가
+        var input = document.getElementById("cafe-search");
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        map.addListener("bounds_changed", function () {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        searchBox.addListener("places_changed", function () {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // 이전에 추가된 마커 제거
+          markers.forEach(function (marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // 검색된 장소로 지도 이동
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function (place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25),
+            };
+
+            // 마커 추가
+            markers.push(
+              new google.maps.Marker({
+                map: map,
+                icon: icon,
+                title: place.name,
+                position: place.geometry.location,
+              })
+            );
+
+            if (place.geometry.viewport) {
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+
+      function toggleOpeningHours(day) {
+        var openingHoursTextarea = document.getElementById("opening-hours");
+        var currentText = openingHoursTextarea.value;
+        var newText = currentText.replace(
+          new RegExp(day + ": [0-9]{2}:[0-9]{2} ~ [0-9]{2}:[0-9]{2}", "g"),
+          ""
+        );
+        var newOpening = prompt(
+          day + " 영업시간을 입력하세요 (ex. 09:00 ~ 22:00)",
+          "09:00 ~ 22:00"
+        );
+        if (newOpening) {
+          newText += "\n" + day + ": " + newOpening;
+          openingHoursTextarea.value = newText;
+        }
+      }
+
+      function submitRequest() {
+        // 여기에 등록 요청 처리 로직 추가
+        alert("카페 등록 요청이 완료되었습니다.");
+      }
+    </script>
+    <!-- Google Maps JavaScript API -->
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"
+    ></script>
+  </body>
+</html>
