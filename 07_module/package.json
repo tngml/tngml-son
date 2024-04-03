@@ -1,0 +1,5 @@
+{
+  "type": "module",
+  "comment": "when we use commonjs module, we have to set type as commonjs ",
+  "comment2": "when we use es6 module, we have to set type as module"
+}
