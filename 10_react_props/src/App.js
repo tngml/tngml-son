@@ -1,10 +1,14 @@
 import FuncProps from "./components/FuncProps";
 import ClassProps from "./components/ClassProps";
-import ProductList from "./components/ProductList";
+import "./App.css";
+import ProductItem from "./components/ProductItem";
+import ProductContainer from "./components/ProductContainer";
+
 function App() {
   const sayHi = () => {
     alert("안녕?");
   };
+
   const products = [
     {
       id: 1,
@@ -95,23 +99,30 @@ function App() {
         <div>안녕안녕</div>
         <div>자니?</div>
       </FuncProps> */}
-      {/* -------------------------------------------------- */}
-      {/* Class 컴포넌트에서의 props 사용  */}
-      {/* <ClassProps drink="아메리카노" payment="카드" price={4000} /> */}
 
-      {/* Class 컴포넌트에서의 props 사용  */}
-      {/* <ClassProps drink="아인슈페너" payment="현금" /> */}
+      {/* //------------------------------ */}
 
-      {/* PropsTypes 사용 */}
-      {/* <ClassProps drink={15900} payment="현금" /> */}
+      {/* class 컴포넌트에서의 props 사용 */}
+      {/* <ClassProps drink='아메리카노' payment='카드' price={4000} /> */}
+
+      {/* default props 사용 */}
+      {/* <ClassProps drink='아인슈페너' payment='현금' /> */}
+
+      {/* PropTypes 사용 */}
+      {/* <ClassProps drink={15900} payment='현금' /> */}
 
       {/* isRequired 사용 */}
-      {/* <ClassProps drink="레몬에이드"></ClassProps> */}
+      {/* <ClassProps drink='레몬에이드' /> */}
+
+      {/* //------------------------------ */}
 
       {/* 연습 */}
-      {products.map((prod) => (
-        <ProductList prodData={prod} key={prod.id} />
-      ))}
+      {/* {products.map((prod) => (
+        <ProductItem prodData={prod} key={prod.id} />
+      ))} */}
+
+      {/* 연습 develop */}
+      <ProductContainer products={products} />
     </div>
   );
 }
