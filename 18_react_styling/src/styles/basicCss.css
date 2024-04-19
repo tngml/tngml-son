@@ -1,0 +1,23 @@
+div {
+  border: 1px solid black;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+}
+
+.container {
+  background-color: aliceblue;
+}
+
+.item {
+  color: rebeccapurple;
+  /* 글씨 가운데 정렬 */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.item1 {
+  font-weight: bold;
+}

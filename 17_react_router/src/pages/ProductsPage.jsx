@@ -15,6 +15,7 @@ export default function ProductsPage() {
       body: "삼성전자 삼성 외장SSD T7 1TB 외장하드 1테라 USB3.2 Gen.2 Type-C MU-PC1T0 공식인증 (정품)",
     },
   ];
+
   return (
     <div>
       <div>상품 목록 페이지</div>
