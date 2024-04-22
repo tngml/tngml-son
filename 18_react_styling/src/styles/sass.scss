@@ -98,11 +98,42 @@ $mobile: 700px;
 }
 
 .sass-for-container {
-  border: 1px solid black; //첫 번째 자식 div 너비 100px
-  //두 번째 자식 div 너비 200px
-  //세 번째 자식 div 너비 300px
-  //2. @for문 사용
-  //#{} : 문자 보관
-  //#{}를 사용해 코드의 어디에서든 변수값 -> $i를 사용할 수 있음
+  border: 1px solid black;
+  //첫 번째 자식 div 너비 100px
+  //두 번째 자식 div 너비 120px
+  //세 번째 자식 div 너비 140px
+
+  // 1. nth-child 사용해 각 요소에 스타일링
+  // div:nth-child(1) {
+  //   background-color: pink;
+  //   width: 100px;
+  //   height: 100px;
+  // }
+
+  // div:nth-child(2) {
+  //   background-color: pink;
+  //   width: 120px;
+  //   height: 100px;
+  // }
+
+  // div:nth-child(3) {
+  //   background-color: pink;
+  //   width: 140px;
+  //   height: 100px;
+  // }
+
+  // 2. @for 사용
+  // #{} : 문자 보관
+  // #{}를 사용해 코드의 어디에서든 변수값 -> $i를 사용할 수 있음
   //문자 사이에 변수를 작성하거나, 연산이 아닌 것에 값을 넣을 때 사용
+  //from 1 to 3 : 1~2까지
+  //from 1 through 3 : 1~3까지
+
+  @for $i from 1 through 3 {
+    div:nth-child(#{$i}) {
+      background-color: pink;
+      height: 100px;
+      width: (80px + 20px * $i);
+    }
+  }
 }

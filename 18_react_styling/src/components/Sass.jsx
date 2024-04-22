@@ -22,8 +22,8 @@ export default function Sass() {
 
       <div className="sass-for-container">
         <div className="box1"></div>
-        <div className="box2"></div>
-        <div className="box3"></div>
+        <div className="box1"></div>
+        <div className="box1"></div>
       </div>
 
       <div className="sass-use-if">@if문 사용</div>
