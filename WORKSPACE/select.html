@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+</head>
+<body>
+    <!-- <select size="4" multiple="multiple"> -->
+    <select>
+        <!-- 강제로 그 중에서 하나 선택하게 만들려고 할때 사용 -->
+        <option>벤츠</option>
+        <option>아우디</option> 
+        <option>BMW</option>
+        <option selected>제네시스</option>
+        <!-- 화면에 보이고 싶은것을 선택했다고 생각해 -->
+    </select>
+    <hr>
+
+    <select name="addr">
+        <optgroup label="서울">
+            <option value="01">종로구</option>
+            <option value="02">용산구</option>
+            <option value="03">강남구</option>
+        </optgroup>
+        <optgroup label="부산">
+            <option>수영구</option>
+            <option>영도구</option>
+            <option>강서구</option>
+        </optgroup>
+    </select>
+    <hr>
+    <button type="submit">전송</button>
+</body>
+</html>

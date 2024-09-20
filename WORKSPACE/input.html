@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <input type="text" /> <br/><!--한줄 데이터 입력  -->
+    <input type="password"/><br/> <!--hide 처리 별표로 나옴-->
+    <input type="radio"><br/> <!--여러개 중에 하나만-->
+    <input type="checkbox"/> <br/><!---->
+    <input type="button" value="click"/> <br/><!---->
+    <input type="submit"/> <br/><!---->
+    <input type="reset"/><br/><!---->
+    <input type="file"/><br/> <!---->
+    <input type="date"/><br/> <!---->
+
+    <hr>
+
+    <h1>Radio Test</h1>
+
+    남자 <input type="radio" name="gender" />
+    여자 <input type="radio" name="gender" />
+
+    <hr>
+
+    <h1>Checkbox Test</h1>
+    야구 <input type="checkbox" name="sports"/>
+    축구 <input type="checkbox" name="sports"/>
+    농구 <input type="checkbox" name="sports"/>
+
+    <hr>
+
+    <h1>Submit Test</h1>
+    <form action="receive.html" method="post"> 
+        <!-- action은 어디로 가라
+         action을 취하면 버튼을 누르거나 해서 페이지를 이동했을때 ,
+         기본적으로 get url에 보임==> 하지만 개인정보같은 건 유출 가능성 있음 ,
+         그래서 post 사용하며 보안적으로 좋음-->
+        <input type="text" name="id"/><br/> 
+        <input type="password" name="pwd"/><br/> 
+        <input type="text" name="name"/><br/> 
+        <input type="number" name="age"><br/> 
+        <input type="email" name="email"><br/> 
+        <!-- <input type="tel" name="tel"><br/>  -->
+         <input type="color" value="#ff0000">
+         <input type="range" value="70">
+         <input type="hidden" value="test">
+        <input type="submit" value="저장"/>
+        <input type="reset" value="초기화"/>
+    </form>
+<!-- 
+    label 태그==> 폼요소애 이름을 붙일때 사용
+    fieldset,legend 태그는 그룹 지을때 사용
+-->
+
+</body>
+</html>
