@@ -1,0 +1,16 @@
+p{
+    /* margin-bottom: 30px;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 20px; */
+    border: 1px solid red;
+    /* border-style: dashed; */
+    border-top-style: dotted;
+    border-bottom-style: dashed;
+    border-left-style: double;
+    border-right-style: groove;
+    padding: 10px, 20px;
+    width: 100px;
+    height: 80px;
+    box-sizing:content-box;
+}

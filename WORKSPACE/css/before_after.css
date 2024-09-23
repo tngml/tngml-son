@@ -1,0 +1,53 @@
+/* 가상 요소 선택자 */
+/* before ==> 태그 앞에다가 */
+/* p::before{
+    content: "<before>";
+}
+/* after ==> 태그 뒤에다가 */
+/* p::after{
+    content: "<after>";
+} */ */
+
+/* 링크 */
+/* 한번도 접근한 적이 없을때  */
+a:link{
+    color: orange;
+    text-decoration: none;
+}
+
+
+/* 방문 한 적이 있을때 */
+a:visited{
+    color:darkgreen;
+
+}
+
+/* hover 마우스를 올리면 */
+p:hover{
+    color: brown;
+}
+
+ /*마우스로 클릭한 상태*/
+button:active{
+    color: blueviolet;
+}
+
+/* 커서가 활성화된다면 */
+#focusTest:focus{
+    background-color: yellow;
+}
+
+/* 체크박스가 선택 */
+#chkTest:checked + label{
+    color: orangered;
+}
+
+/* 비활성화 */
+input:disabled, button:disabled{
+    background-color: skyblue;
+}
+
+/* 활성화 */
+button:enabled{
+    background-color: blueviolet;
+}

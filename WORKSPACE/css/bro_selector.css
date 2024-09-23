@@ -1,0 +1,17 @@
+/* 인접 형제 선택자  (밑에서 아래로)*/
+h1+h2{
+    color: blueviolet;
+}
+
+h5+h2{
+    color: blue;
+}
+
+/* 일반 형제 선택자  (자신을 기준으로 아래로만 찾아냄*/
+h1~h2{
+    color: skyblue;
+}
+
+h4~h2{
+    color: rgb(93, 56, 161);
+}

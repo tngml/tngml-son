@@ -1,0 +1,15 @@
+p{
+    /* background-color: yellow; */
+    width: 100px;
+    height: 100px;
+    /* display: inline; */
+    box-shadow: 5px 5px 10px pink;
+}
+#one{
+    background-color: yellow;
+}
+
+#two{
+    background-color: blue;
+    /* color: white; */
+}

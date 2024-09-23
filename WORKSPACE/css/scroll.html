@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 1000px;
+        }
+
+        #top{
+            width: 320px;
+            height: 240px;
+            border: 1px solid black;
+            overflow: scroll;
+            /* background: red url(../html/img1.jpg)no-repeat left ; */
+        }
+/* 
+        #sub{
+            height: 2000px;
+            background-image: url(../html/img1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        } */
+
+        #sub{
+            height: 2000px;
+            background: red url(../html/img1.jpg)no-repeat left 100px local ;
+        }
+
+    </style> 
+</head>
+<body>
+    <div id="top">
+        <div id="sub"></div>
+    </div>
+    
+</body>
+</html>

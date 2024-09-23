@@ -1,0 +1,9 @@
+/* 자식 선택자*/
+div> p{
+    color: red;
+}
+.sup >p{
+    color: blue;
+}
+
+/* 하위 선택자(공백) */

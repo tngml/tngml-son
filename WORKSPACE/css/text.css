@@ -1,0 +1,24 @@
+#one{
+    /* color: pink; */
+    text-align: left;
+    text-decoration: overline;
+}
+
+#two{
+    /* color: pink; */
+    text-align: right;
+    text-decoration: underline;
+}
+
+#three{
+    /* color: pink; */
+    text-align: center;
+    text-decoration: line-through;
+}
+
+/* 글자 간격 */
+#four{
+    letter-spacing: 5px;
+    /* 행과 행 간격 */
+    line-height: 5px;
+}
