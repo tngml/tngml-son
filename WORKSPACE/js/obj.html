@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const Student = {
+            name:"hong",
+            addr: "seoul",
+            age:18,
+
+            scoreList : [90,80,70] ,
+            printInfo:function(){
+                document.write(this.name + ":" + this.addr + ":" +this.age);
+            }
+        }
+        Student.printInfo();
+       console.log(Student.name);
+       console.log(Student['addr']);
+       console.log(Student.scoreList[2]);
+
+       for (let i = 0; i <Student.scoreList.length; i++){
+        console.log((Student.scoreList)[i]);
+       }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

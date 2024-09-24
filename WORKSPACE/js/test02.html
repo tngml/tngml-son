@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // prompt로 숫자를 받는다
+        //1부터 받은 숫자까지의 합을 구한다.
+        //만약 합이 1000보다 크면 프로그램을 종료한다.
+        //종료 되는 시점의 마지막 숫자를 출력한다.
+
+        let num = parseInt(prompt());
+        let sum = 0;
+
+        for (let i=1; i <=num; i++){
+            sum += i;
+
+            if(sum >=1000){
+                console.log("마지막 숫자 :::",i);
+                break;
+            }
+        }
+
+        console.log("합계 :::",sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

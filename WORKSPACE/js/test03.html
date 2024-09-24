@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //계산1
+        //주사위를 굴려서 나오는 숫자를 각각 3번 곱한다.
+        // ex) 첫 번째 주사위 3인 경우, 3 * 3* 3 =27
+        //     두 번째 주사위 1인 경우, 1 * 1* 1 =1
+        //     세 번째 주사위 2인 경우, 2 * 2* 2 =8
+
+        // 각 주사위의 곱한 결과를 합한다.
+        // ex) 27 + 1+ 8 = 36
+
+        //계산2
+        //첫번째 주사위는 백단위
+        //두번째 주사위는 십단위
+        //세번째 주사위는 일단위로 생각하여 조합한 숫자를 구한다.
+        //ex) 3 1 2 ==> 312
+
+        //계산 1과 계산2의 값이 같은 경우 계산2를 출력함.
+
+        for(let i =0; i <10; i++){
+            for(let j =0; j <10; j++){
+                for(let k =0; k<10; k++){
+                    let sum = (i*i*i) + (j*j*j) + (k*k*k);
+                    let num = (i *100) + (j*10) + k;
+
+                    if (sum===num){
+                        console.log((i*i*i) + "::"+ (j*j*j) + "::"+ (k*k*k));
+                        console.log(num);
+                        console.log("----------------------");
+                    }
+                }
+            }
+        }
+
+
+
+        
+        </script>
+</body>
+</html>

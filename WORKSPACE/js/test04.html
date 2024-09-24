@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const productList = [];
+
+        function Product(num, name, price){
+            this.num = num;
+            this.name = name;
+            this.price = price;
+        }
+
+        productList[0] = new Product(1,"Computer",5000);
+        productList[1] = new Product(2,"IPad",3000);
+        productList[2] = new Product(3,"Galaxy-23",4000);
+
+        //1. prompt로 데이터를 입력 받아서 , productList 배열에 추가
+        //데이터의 형태 예) "4, tv,8000"
+        //2.productList에 있는 정보를 모두 출력한다.
+        //3.가격의 평균을 구하여 출력한다.
+
+        // function addProduct() {
+        //     const input = prompt("Enter product (format: num,name,price):");
+        //     if (input) {
+        //         const [num, name, price] = input.split(',');
+        //         productList.push(new Product(Number(num), name.trim(), Number(price)));
+        //         console.log("Product added!");
+        //     }
+        // }
+
+
+        // function displayProducts() {
+        //     let output = "Product List:\n";
+        //     productList.forEach(product => {
+        //         output += `Num: ${product.num}, Name: ${product.name}, Price: ${product.price}\n`;
+        //     });
+        //     console.log(output);
+        // }
+
+
+        // function calculateAveragePrice() {
+        //     const total = productList.reduce((sum, product) => sum + product.price, 0);
+        //     const average = total / productList.length || 0; 
+        //     console.log(`Average Price: ${average}`);
+        // }
+
+        // addProduct(); 
+        // displayProducts(); 
+        // calculateAveragePrice(); 
+
+        // console.log(productList);
+
+        let newData = prompt();
+        const dataList = newData.split(",");
+
+
+
+        productList[productList.length] = new Product(
+            dataList[0],dataList[1],dataList[2]
+        );
+        let sum = 0;
+
+        for( let index in productList){
+            let num = productList[index].num;
+            let name = productList[index].name;
+            let price = productList[index].price;
+
+           sum += Number(price);
+
+            // console.log(num + ":" + name + ":" + price);
+            console.log(`${num} : ${name} : ${price}`);
+        }
+
+        console.log("평균 : " + (sum / productList.length));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

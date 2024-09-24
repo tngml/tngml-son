@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const Exam = {
+            msg : "변경할 문자열"
+        }
+
+        const ExamCopy = Exam;
+
+        console.log(Exam);
+
+        Exam.msg = "변경 완료..."
+        
+        console.log(Exam.msg);
+        console.log(ExamCopy.msg);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

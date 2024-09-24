@@ -15,10 +15,11 @@ console.log(1 == 2); //false
 console.log(1 == "1"); //true
 console.log(1 != 1); // false-->  1과 1이 같지 않다! -> 거짓 => false
 console.log(1 != 2); //true
-console.log(1 != 2); //false
+console.log(1 != 2); //true
 
 console.log("--------------------------");
-console.log(1 === 3); //true
+// === 은 타입까지 같아야함
+console.log(1 === 3); //false
 console.log(1 === 2); //false
 console.log(1 === "1"); // false-->  숫자 1과 문자 1은 다른 타입
 console.log(1 !== 1); //-> 숫자 1과 숫자 1은 같지 않다!-> false
@@ -49,6 +50,7 @@ console.log(8 % 3); //2
 console.log(1 ** 2); //1
 
 //연산자 응용
+console.log("--------------------------");
 console.log(!(2 > 1));
 console.log(2 > 1 && -2 < 1);
 console.log((2 > 1 && -2 < 1) || 5 > 3);

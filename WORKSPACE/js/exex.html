@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <script>
+        const productList = [];
+
+        function Product(num, name, price) {
+            this.num = num;
+            this.name = name;
+            this.price = price;
+        }
+
+
+        function addProduct() {
+            const input = prompt("Enter product (format: num,name,price):");
+            if (input) {
+                const [num, name, price] = input.split(',');
+                productList.push(new Product(Number(num), name.trim(), Number(price)));
+                alert("Product added!");
+            }
+        }
+
+
+        function displayProducts() {
+            let output = "Product List:\n";
+            productList.forEach(product => {
+                output += `Num: ${product.num}, Name: ${product.name}, Price: ${product.price}\n`;
+            });
+            alert(output);
+        }
+
+
+        function calculateAveragePrice() {
+            const total = productList.reduce((sum, product) => sum + product.price, 0);
+            const average = total / productList.length || 0; // Prevent division by zero
+            alert(`Average Price: ${average}`);
+        }
+
+        addProduct(); // Call to add a product
+        displayProducts(); // Call to display products
+        calculateAveragePrice(); // Call to calculate average price
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

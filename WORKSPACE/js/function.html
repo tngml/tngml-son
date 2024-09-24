@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let data = 'aaaa';
+
+        function print(msg){
+            let data = 'bbb';
+            document.write(msg +data);
+        }
+
+        const anno = function(){
+            console.log("익명함수");
+        }
+        
+        const test = () => {
+            console.log("이것도 익명 함수")
+        }
+        print("함수 호출");
+        anno();
+        test();
+
+        (function (abc){
+            console.log("호출이 될까????" + abc);
+        })("test");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

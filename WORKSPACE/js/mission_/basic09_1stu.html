@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+let score = parseInt(prompt("면접 점수값을 입력하시오."));
+let engScore = parseInt(prompt("영어 점수값을 입력하시오."));
+
+var avg =  (score + engScore)/2;
+
+if(avg>=80){
+   console.log("면접 점수 값:" + score);
+   console.log("영어 점수 값:" + engScore);
+   console.log("평균:" + avg);
+   console.log("합격여부: 합격" );
+}else{
+   console.log("면접 점수 값:" + score);
+   console.log("영어 점수 값:" + engScore);
+   console.log("평균:" + avg);
+   console.log("합격여부: 불합격" );
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

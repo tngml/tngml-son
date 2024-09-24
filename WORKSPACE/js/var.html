@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //var가 아래로 내려가면 결과 undefined
+        //순차적으로 내려오기 때문에 변수가 아래로 내려가면 안돼!
+        //var은 문제점이 많음
+        var one = 10;
+        var one = 20;
+        console.log(one);
+        document.write(one);
+
+        // 변수이기 때문에 값을 다시 할당 할 수 있음 (값을 수정할 수 있음)
+        // 이름이 같으면 안돼! 변수 중복 선언 불가능
+        // 호이스팅되지 않음
+
+        let two = 'abc';
+        two += "xyz";
+        document.write("<br/>" + two);
+        document.write(`<br/>${two}`);
+
+        // 값을 한번 선언하면 다시 할당 안돼! 바꾸지 못해!!
+        // 상수 (변하지 않는 값)
+        //변수 선언과 값 할당을 동시에 해야함
+
+        const three = 123;
+        console.log(three);
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
