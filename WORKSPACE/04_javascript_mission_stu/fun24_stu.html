@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>배열 정렬</title>
+    <script type="text/javascript">
+        // 배열
+        var num = [10, 4, 20, 41, 32, 9, 1, 2];
+
+        function up() {
+            // 오름차순 정렬
+            num.sort((a, b) => a - b);
+            displayResult();
+        }
+
+        function down() {
+            // 내림차순 정렬
+            num.sort((a, b) => b - a);
+            displayResult();
+        }
+
+        function displayResult() {
+            let result = document.getElementById('result');
+            result.innerHTML = num.join(', ');
+        }
+    </script>
+</head>
+<body>
+    <h3>배열 정렬</h3>
+    var num = [10, 4, 20, 41, 32, 9, 1, 2];<br>
+    <button onClick="up()">오름차순</button>
+    <button onClick="down()">내림차순</button>
+    <div id="result"></div>
+</body>
+</html>

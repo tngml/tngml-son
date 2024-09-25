@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <!-- 공백도 인식 -->
+     <h1 class="header">header</h1>
+     <a href="#">link</a>
+     <p id="data">Node <Span style="display: none;">test</Span></p>
+     <script>
+        let pEle = document.querySelector("#data");
+        console.log("==> textContent : ",pEle.textContent);
+        console.log("==>  innerText : ", pEle.innerText);
+        console.log("==>  innerHtml : ", pEle.innerHTML);
+
+        let hEle  = document.querySelector(".header");
+        console.log(hEle);
+
+        let aEle = document.querySelector("a");
+        console.log(aEle);
+
+        let headerList = document.querySelectorAll(".header#data");
+        console.log(headerList);
+
+        // let clsELe = document.getElementsByClassName("header");
+        // console.log(clsELe);
+
+        // let tag = document.getElementsByTagName("body");
+        // console.log(tag);
+
+        // let ele = document.getElementById("data");
+        // let txt = ele.firstElementChild;
+        // console.log(ele + " : " + txt);
+      </script>
+</body>
+</html>

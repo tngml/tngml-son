@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+  function ser(){
+    const input =  document.getElementById("v1").value;
+    const data = input.split(',').map(Number);
+
+    // 0. split
+    let a = input.split(',')
+    console.log(data)
+    // 1. 정렬
+    console.log(data.sort((a, b) => a - b))
+    //2. sum
+    let sum = 0;
+    for(let i = 0; i < data.length; i++){
+        sum += data[i];
+    }
+
+    let avg = sum/data.length
+    
+    //3. 
+    let middle = 0;
+    let b = data.length % 2
+    if( b == 0){
+        let mok = data.length/2- 1;
+        console.log(mok)
+        middle = (data[mok] + data[mok+1] ) / 2
+    }
+    else{
+        let mok = data.length/2;
+        middle = (data[mok])
+    }
+
+    let result = document.getElementById('result')
+
+    result.innerHTML = `합계:${sum}<br> 평균:${avg}<br>중앙값:${middle}`
+
+  }
+
+  
+</script>
+</head>
+<body>
+<h3>배열 관리</h3>
+값:<input type="text" name="v1" id="v1" value="1,5,10,9,3,7,23,4,6,8">
+<button onclick="ser()">데이터 분석</button><br>
+<div id="result"></div>
+</body>
+</html>

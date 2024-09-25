@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+      function sum(array){
+         return array.filter((_, index) => index % 2 === 0)
+                     .reduce((acc, num) => acc + num, 0);
+      }
+
+      var arr = [1, 2, 3, 4, 5];
+      var m = sum(arr);
+      console.log("짝수 합계:", m );
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

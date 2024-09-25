@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+   function even(...numbers){
+    let sum =0;
+    for(let num of numbers){
+        if(num %2 ===0){
+            sum+= num;
+        }
+    }
+    return sum;
+   }
+   var mesg = even(1,2,3,4,5);
+   console.log(mesg);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

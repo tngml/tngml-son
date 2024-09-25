@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history</title>
+    <script>
+        console.log("등록된 페이지 수 :", history.length);
+        function myBack(){
+            history.back();
+        }
+
+        function myForward(){
+            history.forward();
+        }
+
+        function move(step){
+            history.go(step);
+            //원하는 단계로 넘어가기
+            //음수 : 이전 페이지, 양수 : 다음 페이지
+        }
+    </script>
+</head>
+<body>
+    <button onClick="myBack()"> 이전</button>
+    <button onClick="myForward()">다음 </button>
+    <button onClick="move(-2)">이동</button>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문자열 관리</title>
+    <script type="text/javascript">
+        function analyze() {
+            let inputStr = document.getElementById("v1").value;
+
+
+            let charCount = inputStr.replace(/\s/g, '').length;
+
+
+            let wordCount = inputStr.trim() === "" ? 0 : inputStr.trim().split(/\s+/).length;
+
+
+            document.getElementById("result").innerHTML = `단어 수: ${wordCount} <br/> 글자 수: ${charCount} `;
+        }
+    </script>
+</head>
+<body>
+    <h3>문자열 관리</h3>
+    값:<input type="text" name="v1" id="v1" value="How are you? fine thank you">
+    <button onClick="analyze()">데이터 분석</button><br>
+    <div id="result"></div>
+</body>
+</html>

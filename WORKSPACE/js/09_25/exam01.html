@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+        }
+        .color{
+            color: tomato;
+        }
+        .fontStyle{
+            font-style: italic;
+        }
+    </style>
+    <script>
+        function changeColor(){
+           let ele = document.querySelector("h1");
+        //    ele.setAttribute("style", "color:green;", "background-color:gray");
+        ele.setAttribute("class","color fontStyle");
+
+        }
+
+        function changeText(){
+            let tle = document.querySelector("div");
+            // tle.innerText="추가 <span style = 'color : orange'>데이터 </span>";
+            tle.innerHTML="추가 <span style = 'color : orange'>데이터 </span>";
+        }
+    </script>
+</head>
+<body>
+    <h1>Node Test</h1>
+    <div></div>
+    <button onClick="changeColor()">색상 변경</button>
+    <button onClick="changeText()">내용 변경</button>
+</body>
+</html>

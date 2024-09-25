@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 3000px;
+            height: 2000px;
+        }
+        button{
+            position: fixed;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+    <script>
+        function printInfo(){
+            console.log("창 너비 :" ,window.innerWidth);
+            console.log("창 높이 :" ,window.innerHeight);
+            console.log("브라우저 너비 : ", window.outerWidth);
+            console.log("브라우저 높이 : ", window.outerHeight);
+            console.log("위쪽 간격 : ", window.screenTop);
+            console.log("좌측 간격 : ", window.screenLeft);
+            console.log("스크롤 위치(x) : ", window.scrollX);
+            console.log("스크롤 위치(y) : ", window.scrollY);
+        }
+    </script>
+</head>
+<body>
+    <button onClick ="printInfo()">데이터 확인 </button>
+</body>
+</html>

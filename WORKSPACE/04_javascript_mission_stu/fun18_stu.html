@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function move(){
+   location.href ="http://www.google.co.kr";
+}
+  function go(){
+   let go_ul = document.getElementById("site").value;
+   location.href = go_ul;
+
+  }
+</script>
+</head>
+<body>
+<h3>자바스크립트로 특정 URL 접속하기</h3>
+<button onclick="move()">구글사이트로 가기</button><br>
+사이트주소입력:<input type="text" name="site" id="site"><button onClick="go()" >바로가기</button>
+</body>
+</html>

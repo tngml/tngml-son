@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeout</title>
+    <script>
+        //2초 있다가 alert창 띄우기
+        //한번만 실행
+        // setTimeout(function(){
+        //     alert("Timeout");
+        //     console.log("Timeout");
+        // },1000);
+
+
+        //반복해서 실행 
+        let timer = setInterval(function(){
+            let date = new Date();
+            console.log(date.getMinutes() + ":" + date.getSeconds());
+        },1000);
+
+        function stop(){
+            clearInterval(timer);
+        }
+    </script>
+</head>
+<body>
+    <button onClick="stop()">멈춤</button>
+</body>
+</html>

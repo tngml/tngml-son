@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+      
+      <script>
+            //1. 
+            let cnt = 1;
+            let sum = 0;
+            let str = "";
+            function three(){
+                  //3의 배수값과 클릭한 횟수 및 총합을 출력
+                  
+                  let a = 3
+                  
+                  let temp = a *cnt;
+
+                  console.log(a + " : " + cnt+++ " : " +temp )
+                  sum = sum  + temp 
+                  
+                  str = str + sum +","
+
+                  
+                  console.log(sum)
+
+                  document.getElementById("result").innerHTML = `${str} <br>클릭 한수 : ${cnt}<br> 합계 : ${sum}`
+
+            }
+      </script>
+      
+
+</script>
+</head>
+<body>
+<h3>배수 출력</h3>
+<button onclick="three()">3의 배수</button>
+<div id="result">
+</div>
+</body>
+</html>

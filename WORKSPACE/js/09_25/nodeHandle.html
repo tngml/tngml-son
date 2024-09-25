@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>node</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+    <div id="second">
+        <input type="text">
+    </div>
+    <script>
+       let txt = document.createTextNode("four");
+       let liEle =  document.createElement('li');
+       let ulEle = document.querySelector("ul");
+
+       liEle.appendChild(txt);
+       ulEle.appendChild(liEle);
+
+       let inputEle = document.createElement("input");
+       inputEle.setAttribute("type","submit");
+       let divEle = document.querySelector("#second");
+       inputEle.setAttribute("value","버튼");
+
+       divEle.appendChild(inputEle);
+
+       //----------------------------------------------------------------------
+       let ul = document.querySelector("ul");
+
+       let liList = document.querySelectorAll("li");
+
+       for(let i=0; i<liList.length; i++){
+       let data = liList[i].innerText;
+
+       if(data === "two"){
+        ul.removeChild(liList[i]);
+       }
+
+
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+  function myAge(bithDateString){
+    const birthDate = new Date(bithDateString);
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if(monthDiff <0 || (monthDiff ===0 && today.getDate()<birthDate.getDate())){
+      age--;
+    }
+    return age;
+  }
+
+
+
+   var ssn = '1981/10/20';
+   var age = myAge(ssn);
+   console.log("현재 나이:", age );
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

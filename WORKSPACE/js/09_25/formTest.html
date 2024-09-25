@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <script>
+        function formHandle (){
+            // let formEle = document.querySelector("form");
+            let formEle = document.myForm;
+            console.log(formEle.id.value);
+            console.log(formEle.pwd.value);
+            console.log(formEle.name.value);
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm">
+        ID : <input type="text" name="id"><br>
+        PWD : <input type="password" name="pwd"><br>
+        NAME : <input type="text" name="name">
+    </form>
+    <button onClick="formHandle()">확인</button>
+
+</body>
+</html>

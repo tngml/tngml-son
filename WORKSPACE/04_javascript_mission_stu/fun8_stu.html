@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+  function xyz(idnumber){
+      if (idnumber.length !==14 || idnumber[6] !== '-'){
+            return idnumber.length;
+      } 
+      let gender = parseInt(idnumber[7],10);
+      console.log(gender);
+      return gender % 2 ===0 ?"여성" :"남성";
+
+   }  
+   var gender = xyz('811025-1234567');
+   console.log("성별", gender );
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+   function xyz(idnumber){
+      if (idnumber.length !==14 || idnumber[6] !== '-'){
+            return idnumber.length;
+      }
+      return idnumber.substr(0, 6)
+
+   }  
+   var birth = xyz('811025-1234567');
+   console.log("생년월일", birth );
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

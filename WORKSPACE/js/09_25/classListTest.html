@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+
+        .font-20{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="sample">text</p>
+    <p id="tgg">toggle test</p>
+    <script>
+       let pEle =  document.querySelector("p");
+       pEle.classList.add("red-color","font-20");
+
+       //이미 존재하면 반응 없음
+       //중복된것은 반응 없고, 새로운 것만 적용
+    //    pEle.classList.add("red-color");
+
+    pEle.classList.add("red-color","exam");
+
+    pEle.classList.remove("red-color","sample","exam");
+
+    let tEle = document.querySelector("#tgg");
+    
+    //toggle==> 변했다 안 변했다
+    //추가와 삭제가 반복
+    setInterval(function(){
+      tEle.classList.toggle("red-color")  ;
+    },1000)
+
+    </script>
+</body>
+</html>

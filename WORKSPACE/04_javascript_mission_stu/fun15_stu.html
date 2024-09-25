@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+   function bananaCheck(array){
+      return array.filter(word => word.toLowerCase()===('banana')).length;
+   }
+
+   var arr = ['BANANA','melon','banana','apple', 'banana','bananaa'];
+   var cnt = bananaCheck(arr);
+   console.log("banana 글자 포함 단어 갯수:", cnt );
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

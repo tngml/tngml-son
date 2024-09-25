@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>브라우저 정보 보기</title>
+    <script>
+        function bversion() {
+            const userAgent = navigator.userAgent; // userAgent 가져오기
+            document.getElementById("bVersion").value = userAgent; // 버전 정보를 입력
+            document.getElementById("bName").textContent = navigator.appName; // 브라우저 이름
+            document.getElementById("bOnLine").textContent = navigator.onLine ? "true" : "false"; // 온라인 여부
+        }
+    </script>
+</head>
+<body>
+    <h3>사용중인 웹 브라우저 정보 보기</h3>
+    <button onClick="bversion()">보기</button>
+    <div>
+        브라우저 이름: <span id="bName"></span><br>
+        브라우저 버전: <input type="text" name="bVersion" id="bVersion" readonly><br>
+        브라우저 온라인 여부: <span id="bOnLine"></span><br>
+    </div>
+</body>
+</html>

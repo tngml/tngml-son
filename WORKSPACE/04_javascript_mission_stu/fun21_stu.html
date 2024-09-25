@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+      let arr;
+    function make(){
+      arr = [];
+      document.getElementById("result");
+    }
+
+    function remove(){
+      arr = [];
+      document.getElementById("result");
+    }
+
+    
+    function save(){
+      let value = document.getElementById("v1").value;
+      console.log(value)
+      if(value){
+            arr[arr.length] = (value);
+            document.getElementById("v1");
+            document.getElementById("result");
+      }
+    }
+
+    
+    function cons(){
+      if(arr.length>0){
+            document.getElementById("result");
+      }
+
+    }
+  
+</script>
+</head>
+<body>
+<h3>배열 관리</h3>
+<button onClick="make()">배열생성</button>
+<button onClick="remove()">배열삭제</button><br>
+값:<input type="text" name="v1" id="v1" >
+<button onClick="save()">배열에 값 저장</button><br>
+<button onClick="cons()">배열에 값 출력</button><br>
+<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus</title>
+    <script>
+        function validationCheck(){
+            alert("아이디를 입력하세요");
+            if(document.myForm.id.value === ""){
+                document.myForm.id.focus();
+                return false;
+            }
+            if(document.myForm.pwd.value === ""){
+            alert("비밀번호를 입력하세요");
+            document.myForm.pwd.focus();
+            return false;
+        }
+       document.myForm.submit();
+        }
+    </script>
+</head>
+<body>
+    <form name = "myForm" action="windowFunc.html" method="get">
+        ID : <input type="text" name="id"> <br>
+        PWD : <input type="password" name="pwd"><br>
+    </form>
+    <button onClick="validationCheck()">전송</button>
+</body>
+</html>

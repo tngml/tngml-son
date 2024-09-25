@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <script>
+        function checkedTest(){
+            //radio 버튼 확인
+            let radioList = document.querySelectorAll("[type='radio']");
+            let value;
+
+            for(let i = 0; i < radioList.length; i++){
+                if(radioList[i].checked){
+                    value = radioList[i].value;
+                }
+            }
+            console.log("radio의 선택된 값 : " , value);
+        }
+        //---------------------------------------------------------
+        function checkedTest(){
+
+            let checkedList = document.querySelectorAll("[type = 'checkbox']");
+        let valueList = "";
+
+        for(let i =0; i <checkedList.length; i++){
+            if(checkedList[i].checked){
+                valueList = checkedList[i].value;
+            }
+        } console.log("checked의 선택된 값 : ", valueList);
+        }
+        
+        function checkedTest(){
+            let selectList = document.querySelectorAll("option");
+            let selectVal;
+
+            for(let i =0; i < selectList.length; i++){
+                if(selectList[i].selected){
+                    selectVal = selectList[i].value;
+                }
+            } console.log(selectVal);
+        }
+
+
+    </script>
+</head>
+<body>
+    first : <input type="radio" name="one" value="first">
+    second : <input type="radio" name="one" value="second">
+    <hr>
+
+   야구 :  <input type="checkbox" name="sports" value="baseball">
+   축구 :  <input type="checkbox" name="sports" value="soccer">
+
+   <hr>
+   계절 <select>
+
+    <option>봄</option>
+    <option>여름</option>
+    <option>가을</option>
+    <option>겨울</option>
+   </select>
+
+   <button onClick="checkedTest()">확인</button>
+
+   
+</body>
+</html>
