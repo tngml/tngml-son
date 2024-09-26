@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+        let keyEl = document.querySelector("input");
+        keyEl.addEventListener("keydown", (e) => {
+            console.log(e.keyCode); //코드의 값을 가져옴
+            //console.log(e.ctrlKey);  // 수정된 부분
+            //console.log(e.altKey);
+            //console.log(e.shiftKey); // 수정된 부분
+        });
+    </script>
+</body>
+</html>

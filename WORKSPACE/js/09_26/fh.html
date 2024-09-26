@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("input[type='submit']").on("click", function () {
+          event.preventDefault();
+
+          let id = $("#userid").val();
+          let pwd = $("#passwd").val();
+
+          if (id === "") {
+            alert("아이디 값을 입력하시오.");
+          } else if (pwd === "") {
+            alert("비밀번호를 입력하시오.");
+          } else {
+            location.href = "success.html";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="success.html">
+      아이디<input type="text" name="userid" id="userid" /><br />
+      비밀번호<input type="text" name="passwd" id="passwd" /><br />
+      <input type="submit" value="로그인" />
+    </form>
+  </body>
+</html>

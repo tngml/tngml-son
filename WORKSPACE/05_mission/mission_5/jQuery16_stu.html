@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+		$("input[type='submit']").on("click",function(){
+			event.preventDefault();
+
+			let id = $("#userid").val();
+			let pwd = $("#passwd").val();
+			let ids =$("#idSpan").val();
+			let pwds= $("#pwSPan").val();
+			
+			
+				if(id === ""){
+					$("#idSpan").html('아이디 값을 입력하시오.');
+				} else {
+					$("#idSpan").html('');
+				}
+				
+			  if(pwd === ""){
+					$("#pwSpan").text('비밀번호 값을 입력하시오.');
+				} else {
+					$("#pwSpan").text('');
+				}
+			
+			
+			if(id !== "" && pwd !==""){
+			
+				location.href = "success.html" }
+	
+	})})
+	
+</script>
+</head>
+<body>
+<form action="success.html">
+ 아이디<input type="text" name="userid" id="userid">
+ <span id="idSpan"></span><br>
+ 비밀번호<input type="text" name="passwd" id="passwd">
+ <span id="pwSpan"></span><br>
+  <input type="submit" value="로그인" >
+ </form>
+</body>
+</html>

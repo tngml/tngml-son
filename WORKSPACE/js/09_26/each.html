@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").each(function (idx,item){
+                console.log(item);
+
+                if(idx % 2==0){
+                    $(item).css('color',"red");
+                }else{
+                    $(item).css('color',"blue");
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+    <p>four</p>
+</body>
+</html>

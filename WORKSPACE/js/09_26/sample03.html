@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("input:submit").on("click", function() {
+                let pw1 = $("#pw").val();
+                let pw2 = $("#pw2").val();
+                let memId = $("#memId").val();
+                let dept = $("option:selected").val();
+
+                if(pw1 === pw2) {
+                    alert("OK");
+                    console.log("아이디 : ",memId );
+                    console.log("비밀번호 : ",one);
+                    console.log("부서 : ", dept);
+                } else {
+                    alert("No");
+                }
+            });
+
+            $("#pw").on("input", function() { // keyup
+                let pw1 = $(this).val();
+            
+                if(pw1 != "") { // data.length != 0
+                    $("#pw2").prop("disabled", false);
+                } else {
+                    $("#pw2").prop("disabled", true);
+                }
+
+            });
+
+            $("#dupCheck").on("click", function() {
+                window.open("sample04.html", "checkUI", "width=500, height=300");
+            });
+            
+        });
+    </script>
+
+</head>
+<body>
+    ID : <input id="memId" type="text" disabled><button id="dupCheck">중복확인</button><br>
+    PW : <input type="password" id="pw"><br>
+    CHK_PW : <input type="password" disabled id="pw2"><br>
+    DEPT : <select name="" id="">
+                <option value="">정치</option>
+                <option value="">경제</option>
+                <option value="">사회</option>
+                <option value="">문화</option>
+          </select><br>
+          <input type="submit" value="ADD">
+</body>
+</html>

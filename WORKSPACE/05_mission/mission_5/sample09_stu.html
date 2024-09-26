@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    function check(n){
+        let lang = document.querySelectorAll('.lang');
+
+        for(let i =0; i<lang.length; i++){
+            lang[i].checked = n.checked;
+        }
+    }
+</script>
+  
+
+</script>
+</head>
+<body>
+전체선택
+<input type="checkbox" name="all" onclick="check(this)"><br>
+<input type="checkbox" name="java" class="lang">java<br>
+<input type="checkbox" name="sql" class="lang">sql<br>
+<input type="checkbox" name="angular" class="lang">angular<br>
+</body>
+</html>

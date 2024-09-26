@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const myLoad = ()=>{
+            let btn_1 = document.querySelector("#clk_1");
+            let btn_2 = document.querySelector("#clk_2");
+            let btn_3 = document.querySelector("#clk_3");
+            // btn.addEventListener("click", myHandler);
+            btn_1.addEventListener("click", function(){
+                alert("고유한 이벤트 헨들러.")
+            });
+            btn_2.addEventListener("click",myHandler);
+
+            btn_3.onclick = function(){
+                alert("속성을 활용한 이벤트");
+            };
+        }
+
+
+
+
+        const myHandler = () => {
+            alert("이벤트 발생");
+        }
+
+    </script>
+</head>
+<body onload="myLoad()">
+    <button onclick="myHandler()" >클릭1</button>
+    <button  id="clk_1">클릭2</button>
+    <button id="clk_2">클릭3</button>
+    <button id="clk_3">클릭4</button>
+
+</body>
+</html>

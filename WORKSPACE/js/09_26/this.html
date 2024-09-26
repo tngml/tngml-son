@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const init =()=>{
+        // let initEl= document.querySelector("P");
+        // initEl.onclick = clickHandler;
+
+        let spanList = document.querySelectorAll("span");
+        //반복문
+        spanList.forEach((spanEl) => {
+            spanEl.addEventListener("click",() => {
+                console.log( "----> ",spanEl.innerHTML);
+                console.log(event.target);
+            })
+        });
+    }
+
+    const clickHandler = (initEl)=>{
+        console.log(initEl.innerHTML);
+    }
+</script>
+<body onload="init()">
+    <p id="P1" onclick="clickHandler(this)">one</p>
+    <p id="P2" onclick="clickHandler(this)">two</p>
+    <p id="P3" onclick="clickHandler(this)">three</p>
+
+    <hr>
+    <span>first</span>
+    <span>second</span>
+    <span>third</span>
+</body>
+</html> 

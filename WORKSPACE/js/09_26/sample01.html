@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../09_26/jquery.js"></script>
+    <script>
+        //h1 ==> 오렌지
+        //p==> 배경색 바꾸기
+        $(document).ready(function(){
+            $("h1").css('color',"orange");
+            $("p").css('background-color',"green");
+
+            //one은 마진을 10
+            //two는 패딩을 10
+
+            $(".one").css('margin',"10px");
+            $(".two").css('padding',"20px");
+
+
+            $(".one.two").css('font-style',"italic");
+
+            
+        })
+
+    </script>
+</head>
+<body>
+
+    <h1 class="one">첫번째 글</h1>
+    <p class="one">
+        벌써 목요일 입니다.
+    </p>
+    <h1 class="one two">두번째 글</h1>
+    <p class="two">
+        요즘 날씨가 쌀쌀하죠...
+    </p>
+</body>
+</html>

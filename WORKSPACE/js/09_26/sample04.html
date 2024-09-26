@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("button").on("click", function() {
+                let idVal = $("input:text").val();
+                opener.document.querySelector("#memId").value = idVal;
+                // opener가 부모쪽 / 부모쪽 #memId인 곳에 idVal의 값을 넣어라
+                window.close();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text">
+    <button>확인</button>
+</body>
+</html>

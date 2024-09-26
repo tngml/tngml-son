@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+  const init = () => {
+    let imgs = document.querySelectorAll('img');
+    let result = document.getElementById('result');
+
+    imgs.forEach(img => {
+      img.onmouseover = () => {
+        result.innerHTML = `<h1>${img.src.split('/').pop()}</h1>`;
+      }
+    });
+  }
+</script>
+</head>
+<body onload="init()">
+이미지 이름 알아보기<br>
+<img src="a.jpg" width="100" height="100">
+<img src="b.jpg" width="100" height="100">
+<img src="c.jpg" width="100" height="100"><br>
+파일명:<span id="result"></span>
+</body>
+</html>
