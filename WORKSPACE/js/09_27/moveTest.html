@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .one{
+            color: red;
+        }
+        .two{
+            color:blue
+        }
+        .three{
+            background-color: green;
+        }
+        .four{
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        //첫번째 있는거 한  번 더 붙여줘
+        $(document).ready(function(){
+            //div요소를 찾아 그중에서 첫번째 가져와 body에 붙여
+            //맨위에 있던 것이 맨 밑으로 이동!
+            // $("div").first().appendTo("body");
+
+            //복사하고 싶으면 clone을 사용해야해
+            $("body").append($("div").first().clone());
+        })
+
+    </script>
+</head>
+<body>
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
+    <div class="four">Four</div>
+</body>
+</html>

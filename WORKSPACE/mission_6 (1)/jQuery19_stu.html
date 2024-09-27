@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+   $(document).ready(function() {
+		 var childWin;
+		 $("button").on("click",function(){
+		childWin = window.open("childWin3.html","width=500","height =500");
+		
+	});
+   });
+
+</script>
+</head>
+<body>
+ 우편번호<input type="text" name="post" id="post"><br>
+ 주소:<input type="text" name="address" id="address"><br>
+ 추가주소:<input type="text" name="address1" id="address1">
+ <button>주소</button>
+
+</body>
+</html>

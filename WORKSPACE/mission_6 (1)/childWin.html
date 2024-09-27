@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+ $(document).ready(function() {
+
+					
+	$("#a").on('click',function(){
+		window.close();
+	  });
+	  					
+	$("#b").on('click',function(){
+		opener.close("childWin.html");
+	  });
+
+	});
+</script>
+</head>
+<body>
+childWin.html<br>
+<button id="a">현재창 닫기</button>
+<button id="b">부모창 닫기</button>
+</body>
+</html>

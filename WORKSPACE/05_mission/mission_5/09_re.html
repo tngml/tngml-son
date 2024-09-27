@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    const init=()=>{
+       let all = document.querySelector("#all");
+       let inputList = document.querySelectorAll('div>input');
+
+       for(let i =0; i<inputList.length; i++){
+        inputList[i].addEventListener("click",()=>{
+            if(! inputList[i].checked){
+                all.checked = false;
+            }else{
+                let isAll = true;
+
+                for(let j=0; j<inputList.length; j++){
+
+                    if(!inputList[j].checked ){
+                        isAll= false;
+                        break;
+                    }
+                }
+            }
+        })
+       }
+
+
+       all.addEventListener("click",()=>{
+        let checkResult = all.checked;
+
+        // if (all.checked){
+            for(let i=0; i<all.length; i++){
+                inputList[i].checked = checkResult;
+            };
+        // };
+       });
+    };
+
+</script>
+
+  
+
+</script>
+</head>
+<body onload="init()">
+전체선택
+<input id="all" type="checkbox" name="all"><br>
+<input type="checkbox" name="java" class="lang">java<br>
+<input type="checkbox" name="sql" class="lang">sql<br>
+<input type="checkbox" name="angular" class="lang">angular<br>
+</body>
+</html>
+

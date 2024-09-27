@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //div를 찾아서 html 안에 넣어봐
+            $("div").html("<h1>삽입 데이터</h1>");
+
+            //단순 데이터를 입력 할 때
+            $("p").text("<h1>삽입 데이터</h1>");
+
+            //지워보기
+            // $("span").remove();
+            //태그는 남아있지만 안에 데이터가 삭제
+            $("span").empty();
+
+            //appendTo
+            //어디에 있는 h1 body밑에 있는 h1에 붙여라
+           let newEl = $('<h1></h1>').html("핳하하하하핳");
+           newEl.appendTo("body")
+
+
+           let newElTwo = $("<p>두번째</p>");
+           // body에다가 newElTwo를 넣어
+           $("body").append(newElTwo,$("<p>세번째</p>"),$("<p>네번째</p>"));
+
+
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <p></p>
+    <span>제거 대상 데이터</span>
+</body>
+</html>

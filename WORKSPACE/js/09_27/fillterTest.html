@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //이조건을 필터링 할꺼야
+            $("h3").filter(function(idx){
+                //idx의 값이 3인 것 
+               return idx % 3 === 0;
+            }).css("background-color",'red');
+        })
+    </script>
+</head>
+<body>
+    <h3>one</h3>
+    <h3>two</h3>
+    <h3>three</h3>
+    <h3>four</h3>
+    <h3>five</h3>
+    <h3>six</h3>
+
+</body>
+</html>

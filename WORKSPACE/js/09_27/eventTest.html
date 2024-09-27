@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //div를 찾을꺼고 누를꺼야,그러고 작업을 할꺼야
+            $("div").on("click",function(){
+                console.log("on()사용");
+            });
+
+            //눌렀을때 
+            $("p").click(function(){
+                console.log("click()사용");
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <div>클릭</div>
+    <p>Click</p>
+</body>
+</html>

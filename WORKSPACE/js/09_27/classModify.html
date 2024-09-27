@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .one-0 {
+            color: red;
+            background-color: yellow;
+        }
+
+        .one-1 {
+            color: blue;
+            background-color: gray;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //$("h1").addClass("one");
+            $("h1").addClass(function(index){
+                return "one-" + (index%2);
+            });
+
+            
+        });
+    </script>
+</head>
+<body>
+    <h1>데이터...</h1>
+    <h1>Data</h1>
+    <h1>데이터</h1>
+    <h1>Data</h1>
+</body>
+</html>

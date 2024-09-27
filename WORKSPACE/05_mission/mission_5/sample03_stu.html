@@ -11,9 +11,21 @@
     }
 </script>
 </head>
-<body>
+<body>     <!-- onload ='init()'-->
 글자수 세기<br>
 <textarea rows="10" cols="10" onkeydown="change()"></textarea><br>
+<!-- keyup도 가능  -->
 입력문자수:<span id="result"></span>
 </body>
 </html>
+<!-- 
+const init() = () =>{
+    let text = document.querySelector('textarea');
+
+    text.addEventListener("keyup", () => {
+        let data = text.value;
+
+        let span = document.querySelector("span");
+        span.innerHTML = data.length;
+    })
+} -->

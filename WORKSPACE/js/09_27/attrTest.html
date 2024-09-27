@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        //attr 속성이면 다 건드릴수 있어
+        $(document).ready(function(){
+            //href의 값을 가져와
+           console.log( $("a").attr("href"));
+
+           //키와 value값을 던져주면 돼
+        //    $("a").attr("href","http://www.google.co.kr");
+
+        //    //스타일 넣기
+        //    $("a").attr("style","text-decoration:none");
+
+        //    //클래스 넣기
+        //    $("a").attr("class","test");
+
+           $('a').attr({
+            href : "http://www.google.co.kr",
+            style : "text-decoration:none",
+            class : "test"
+
+           });
+           //지우는 방법
+           $("a").removeAttr("style");
+
+        })
+    </script>
+    
+</head>
+<body>
+    <a href="http://www.naver.com">네이버</a>
+    <a href="http://www.daum.net">다음</a>
+</body>
+</html>

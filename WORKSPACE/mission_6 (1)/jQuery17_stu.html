@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+  
+   $(document).ready(function() {
+	   var childWin
+
+	   $("#one").on("click",function(){
+		childWin = window.open("childWin.html","width=500","height =500");
+		
+	});
+	
+		$("#two").on("click", function() {
+			 childWin.close(); 
+	   $("#three").on('click',function(){
+		window.close();
+	  });
+
+   })})
+	
+
+</script>
+</head>
+<body>
+ <button id="one">새창 열기</button>
+ <button id="two">새창 닫기</button>
+ <button id="three">현재창(부모장) 닫기</button>
+</body>
+</html>

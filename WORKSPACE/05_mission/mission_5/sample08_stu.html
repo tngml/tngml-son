@@ -10,8 +10,8 @@
         let passwd1 = document.getElementById("passwd1");
         let resultElement = document.getElementById("result");
      
-
-        if(passwd === passwd1 ){
+        //value가 같아야 일치가 뜸
+        if(passwd.value === passwd1.value ){
             resultElement.textContent = '비밀번호 일치'
 
         } else{

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('div').css("color","red")
+            //filter을 걸면 
+            .filter(":even").css("background-color","yellow")
+            //홀수만 찾아봐
+            $("div").filter(":odd").css("color","black");
+
+            //end에 대한 연습
+            // $("div").css("color","red")
+            // .filter(":even").css("background-color","yellow")
+            // .end() //다시 되돌아가서 다시 필터링
+            // .filter(":odd").css("color","black");
+
+            //eq에 대한 연습
+            //index로 고르는 거
+            //내가 원하는 index 찾아감
+            //-1 ---->600  마이너스만 돌고있으요 한번만 돌아요
+            //.first .last 첫번째, 마지막
+            $("div").eq(2).css("font-size","30px")
+            $("div").first().css("font-size","50px")
+            $("div").last().css("font-size","70px")
+
+        })
+    </script>
+</head>
+<body>
+    <div>100</div>
+    <div>200</div>
+    <div>300</div>
+    <div>400</div>
+    <div>500</div>
+    <div>600</div>
+</body>
+</html>

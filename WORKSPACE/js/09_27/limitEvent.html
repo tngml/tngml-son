@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('h1').on("click",function(){
+            //     $('body').append("<h1>추가</h1>");
+            // })
+
+            $('div').on("click","h1",function(){
+                $('div').append("<h1>추가</h1>");
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <h1>데이터</h1>
+</body>
+</html>

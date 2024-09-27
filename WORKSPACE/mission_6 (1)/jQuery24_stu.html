@@ -1,0 +1,48 @@
+24번
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+
+      //구현
+      $("li").filter(function(idx){
+         return idx%2!==0;
+      }).css("color", "red")
+      .css("font-size", "30px");
+
+      $("#sum").on("click", function(){
+         // console.log($("li"));
+         let sum=0;
+         
+         $("li").each(function(index, item){
+            if(index%2!==0){
+               sum+=Number($(item).text());
+            }
+            
+         });
+
+         $("#result").html(sum);
+      });
+      
+   });
+</script>
+</head>
+<body>
+   <ul>
+    <li>5</li>
+    <li>15</li>
+    <li>25</li>
+    <li>35</li>
+    <li>45</li>
+    <li>55</li>
+    <li>65</li>
+   </ul>
+<button id="sum">li태그의 총합계</button><br>
+합계:<span id="result"></span>
+</body>
+</html>
