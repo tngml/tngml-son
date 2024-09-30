@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('button').on('click', function(){
+                $.ajax({
+                    url: 'data.json',
+                    dataType : 'json',
+                    success: function(data){
+                        console.log(data);
+                        $.each(data, function(index, item){
+                            let tr = "<tr>"
+                                tr += `<td> ${item.num} </td>`
+                                tr += `<td> ${item.title} </td>`
+                                tr += `<td> ${item.writer} </td>`
+                                tr += `<td> ${item.date} </td>`
+                                tr += `<td> ${item.hit} </td>`
+                                tr += `</tr>`
+
+                                let oldDate = $('table').html();
+
+                                $('table').html(oldDate + tr);
+                        })
+                    }
+            
+                })
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <button>데이터불러오기</button>
+    </div>
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일자</th>
+            <th>조회수</th>
+        </tr>
+    </table>
+</body>
+</html>

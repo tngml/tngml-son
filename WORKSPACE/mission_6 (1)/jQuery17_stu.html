@@ -9,6 +9,8 @@
 
   
    $(document).ready(function() {
+
+       // 저장해놔야 
 	   var childWin
 
 	   $("#one").on("click",function(){
@@ -17,12 +19,18 @@
 	});
 	
 		$("#two").on("click", function() {
+
+			//if (child === undefined){alert("새창을 생성하세요.")}
+			//else {child.close}
 			 childWin.close(); 
 	   $("#three").on('click',function(){
 		window.close();
 	  });
 
    })})
+
+
+
 	
 
 </script>

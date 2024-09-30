@@ -15,6 +15,18 @@
   function aa(){
 
   }
+
+  //$(document).ready(function(){
+  //$("#one").on("click,function({
+  //this에 있는 html값을 가지고와
+  //let num = $(this).html();
+  //let addr = $("#two").html();
+  //opner.$("#num").val(num);
+  //opner.$("#addr").val(num);
+  //window.close();
+  //부모쪽에 들어가는 곳이 있어야함
+  //}))
+  //})
 </script>
 </head>
 <body>
@@ -24,10 +36,13 @@
       <th>주소</th>
     </tr>
     <tr>
+      <!-- id(one) -->
       <td><a href="javascript:post('12345','서울시 강남구 XXX 아파트')">12345</a></td>
       <td>서울시 강남구 XXX 아파트</td>
     </tr>
     <tr>
+      <!-- id(two) -->
+       <!--함수를 의미하는 javascript를 입력 -->
       <td><a href="javascript:post('99999','경기도 고양시 ZZZ 아파트')">99999</a></td>
       <td>경기도 고양시 ZZZ 아파트</td>
     </tr>

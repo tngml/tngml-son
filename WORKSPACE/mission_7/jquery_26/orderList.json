@@ -1,0 +1,68 @@
+[
+    {
+        "orderNum" : 1,
+        "memId" : 1,
+        "memName" : "hong",
+        "orderDt" : "2024-09-30",
+        "orderItems" : [{
+            "itemNum" : 1,
+            "itemName" : "TV",
+            "itemPrice" : 10000,
+            "quantity" : 1
+        }] 
+    },
+    {
+        "orderNum" : 2,
+        "memId" : 2,
+        "memName" : "kim",
+        "orderDt" : "2024-09-30",
+        "orderItems" : [{
+            "itemNum" : 2,
+            "itemName" : "Monitor",
+            "itemPrice" : 1000,
+            "quantity" : 2
+        },
+        {
+            "itemNum" : 3,
+            "itemName" : "Computer",
+            "itemPrice" : 8000,
+            "quantity" : 2            
+        }] 
+    },
+    {
+        "orderNum" : 3,
+        "memId" : 3,
+        "memName" : "park",
+        "orderDt" : "2024-09-30",
+        "orderItems" : [{
+            "itemNum" : 3,
+            "itemName" : "Computer",
+            "itemPrice" : 8000,
+            "quantity" : 1            
+        }] 
+    },
+    {
+        "orderNum" : 4,
+        "memId" : 1,
+        "memName" : "hong",
+        "orderDt" : "2024-09-30",
+        "orderItems" : [{
+            "itemNum" : 4,
+            "itemName" : "Mouse",
+            "itemPrice" : 500,
+            "quantity" : 1            
+        },
+        {
+            "itemNum" : 2,
+            "itemName" : "Monitor",
+            "itemPrice" : 1000,
+            "quantity" : 1            
+        },
+        {
+            "itemNum" : 3,
+            "itemName" : "Computer",
+            "itemPrice" : 8000,
+            "quantity" : 1            
+        }] 
+    }    
+]

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            let total_data; // ajax로 가져온 데이터.
+            let table;
+            let showingView = 5;
+            let max_count;  
+
+            $(document).ready(function(){
+                $.ajax({
+                    url: 'boardList.json',
+                    method: 'get',
+                    dataType: 'json',
+                    success : function(data, status, xhr){
+
+                        // 총 페이지 갯수.
+                        let page = 0;
+                        if(data.length % 5 == 0){
+                            page = Math.floor(data.length/5);
+                        }
+                        else{
+                            page = Math.floor(data.length/5)+1;
+                        }
+
+                        // 초기화.
+                        countperPage = page;
+                        total_data = data;
+                        max_count = data.length;
+                        table = $('table').html(); // 임시 저장
+
+                        // 링크 걸기.
+                        for(let i = 1; i <= page; i++){
+                            let span = $('span').html();
+                            
+                            let row = `<a href= '#' onclick ='setTable(${i})'> [${i}] </a>`;
+
+                            $('span').html(span + row)
+                        }
+
+                        setTable(1);
+                    }
+                })
+            });
+
+
+            //테이블 그리기.
+            function setTable(pageNum) {
+                console.log(total_data)
+                let start = (pageNum - 1) * 5;
+                let end = (pageNum )* 5
+                
+                
+                if(end >= max_count){
+                    end = max_count;
+                };
+                console.log(start + " |  " + end);
+
+                let t = table;
+                let row ="";
+                for(let i = start; i < end; i++){
+                        
+                         row += `<tr>`;
+                            row += `<td>${total_data[i].num}</td>`;
+                            row += `<td><a href='#'>${total_data[i].title}</a></td>`;
+                            row += `<td>${total_data[i].createDt}</td>`;
+                            row += `<td>${total_data[i].hit}</td>`;
+                            row += `</tr>`;
+                            $('table').html(t+row);
+                    }
+            }
+
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Num</th>
+                <th>Title</th>
+                <th>Create Date</th>
+                <th>Hit</th>
+            </tr>
+        </table>
+        <div>페이지 번호 : <span></span></div>
+    </body>
+</html>

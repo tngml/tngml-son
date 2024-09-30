@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url : "paramTest.jsp",
+                //전송방식
+                type :"get",
+                //내가 던진 데이터 
+                data : {
+                    id : "aaaa",
+                    pwd : "1111"
+                },
+                dataType : "json",
+                success : function(data){
+                    $("div").html(data);
+                },
+                erroer : function(){
+                    console.log("error.......")
+                }
+            })
+
+            // $.get({
+                // url : "paramTest.jsp",
+                // //전송방식
+                // data : {
+                //     id : "aaaa",
+                //     pwd : "1111"
+                // },
+                // success : function(data){
+                //     $("div").html(data);
+                // }})
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

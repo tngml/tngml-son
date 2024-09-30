@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url : "data.xml",
+                dataType : "xml",
+                success : function(data){
+                  let productList = $(data).find("product");
+
+
+                   $.each(productList, function(index, item){
+                    let num = $(item).find("num").text();
+                    let name = $(item).find("name").text();
+                    let company = $(item).find("company").text();
+                    let price = $(item).find("price").text();
+
+                    let msg = ""
+                    msg = "<tr>";
+                    msg += "<td>" + num + "</td>";
+                    msg += "<td>" + name + "</td>";
+                    msg += "<td>" + company + "</td>";
+                    msg += "<td>" + price + "</td>";
+                    msg += "</tr>"
+
+                    $("table").append(msg);
+
+                   })
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Product List</h1>
+    <hr>
+    <table border="1">
+        <tr>
+            <th>Num</th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Price</th>
+
+        </tr>
+    </table>
+</body>
+</html>

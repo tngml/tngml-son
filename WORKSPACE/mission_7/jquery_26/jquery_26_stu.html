@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            let orders;
+            $(document).ready(function(){
+                $.ajax({
+                    url : "orderList.json",
+                    dataType : 'json',
+                    success : function(data){
+                        console.log(data)
+                        orders =data;
+
+                        let print =`<tr>
+                            <th>Order Num</th>
+                            <th>Member Name</th>
+                            <th>Order date</th>
+                            <th>Product Count</th>
+                            <th>Total Price</th>
+                            </tr>`;
+
+                            for(let i =0; i<data.length; i++){
+                                console.log(data[i].orderNum)
+                                print += `<tr>`
+                                print += `<td>${data[i].orderNum}</td>`
+                                print += `<td><a href ='#' onclick="save(${data[i].orderNum})">${data[i].memName}</a></td>`
+                                print += `<td>${data[i].orderDt}</td>`
+                                let price_sum = 0;
+                                let quantity_sum = 0;
+                                for(let j =0 ; j < data[i].orderItems.length;j++){
+                                    quantity_sum +=data[i].orderItems[j].quantity
+                                    console.log(quantity_sum)
+                                    price_sum += data[i].orderItems[j].itemPrice *data[i].orderItems[j].quantity
+                                }
+                                console.log(price_sum)
+                                print += `<td>${quantity_sum}</td>`
+                                print += `<td>${price_sum}</td>`
+                            print += `</tr>`
+                            }
+
+                            $("#print").html(print);                  
+                        }
+                        
+                })
+
+                $("button").on("click",function ()  {
+                    const name = $('input[type="text"]').val();
+                    $('#print1').attr('style', 'display:block;')
+                    //name = 2
+                    console.log(orders)
+
+                    let orderList = orders[name-1].orderItems
+                    console.log(orderList)
+                    
+                    let print1 =`<tr>
+                                <th>Order Num</th>
+                            <th>item Num</th>
+                            <th>item Name</th>
+                            <th>price</th>
+                            <th>order qty</th>
+                            </tr>`;
+
+                    for(let i =0; i<orderList.length; i++){
+                        console.log(orderList[i].itemNum)
+                        print1 += `<tr>`
+                            print1 += `<td>${orders[name-1].orderNum}</td>`
+                            print1 += `<td>${orderList[i].itemNum}</td>`
+                            print1 += `<td>${orderList[i].itemName}</td>`
+                            print1 += `<td>${orderList[i].itemPrice}</td>`
+                            print1 += `<td>${orderList[i].quantity}</td>`
+                            print1 += `</tr>`
+                    }
+                        console.log(print1)
+
+                    $("#print1").html(print1);                  
+                    })
+
+                 })
+                 function save(num){
+                    $('#print1').attr('style', 'display:block;')
+                        console.log(orders[num])
+                        let orderList = orders[num-1].orderItems
+                    console.log(orderList)
+                    
+                    let print1 =`<tr>
+                                <th>Order Num</th>
+                            <th>item Num</th>
+                            <th>item Name</th>
+                            <th>price</th>
+                            <th>order qty</th>
+                            </tr>`;
+
+                    for(let i =0; i<orderList.length; i++){
+                        console.log(orderList[i].itemNum)
+                        print1 += `<tr>`
+                            print1 += `<td>${orders[num-1].orderNum}</td>`
+                            print1 += `<td>${orderList[i].itemNum}</td>`
+                            print1 += `<td>${orderList[i].itemName}</td>`
+                            print1 += `<td>${orderList[i].itemPrice}</td>`
+                            print1 += `<td>${orderList[i].quantity}</td>`
+                            print1 += `</tr>`
+                    }
+                        console.log(print1)
+
+                    $("#print1").html(print1);  
+                    }
+
+
+            
+        </script>
+    </head>
+    <body>
+        <h3>상품 주문 목록</h3>
+        <hr/>
+        <p>
+            검색 : <input type="text" /><button>검색</button>
+        </p>
+        <table border="1" id="print">
+            <tr>
+                <th>Order Num</th>
+                <th>Member Name</th>
+                <th>Order date</th>
+                <th>Product Count</th>
+                <th>Total Price</th>
+            </tr>          
+        </table>    
+        <hr/>
+        <div>
+            <table border="1" style="display:none" id="print1">
+                <tr>
+                    <th>Order Num</th>
+                    <th>item Num</th>
+                    <th>item Name</th>
+                    <th>price</th>
+                    <th>order qty</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
+

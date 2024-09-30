@@ -14,12 +14,29 @@
           $("#result").val(oneResult);
         });
 
+        //풀이
+        // $(document).ready(function () {
+        //   $("#one").on("click", function () {
+        //   $("v1").val();
+        //   $("v2").val();
+        // 두개를 더한 값을 result
+        // let result = $Number(#v1).val() + $Number(#v2).val();
+        //result를 찾아서 val값을 넣어야함
+        //("#result").val(result)
+
+
         $("#quantity").on("click", function () {
           let price = $("#price").val();
           let quantity = Number($(this).val());
           let total = price * quantity;
           $("#total").html(total);
         });
+
+
+        // 뭔가가 바꼈을때
+        //("#quantity").on("click", function () {
+        //let result = $("v1").val() * $("v2").val();
+        //$("tot").html(result)
 
         $("#two").on("click", function () {
           let totalPrice = 0;
@@ -34,10 +51,27 @@
           }
         });
       });
+
+
+      //$("#two").on("click, function(){
+
+      //let sum = 0;
+      //  $("[type ="checkbox"]").each("click", function (index,ele) {
+      //  ele찾아서 확인
+      // 체크
+      // if (ele.checked){체크 되어있는 val 추출
+      // sum += $Number((this).vl());
+      //sum에다가 뿌려줌
+      //
+      //}
+      //$("sum").html(sum);
+      //}")
+
     </script>
   </head>
   <body>
     <h3>1. + 연산</h3>
+    <!-- 두개를 찾아서 result에 넣어! -->
     <input type="text" name="v1" id="v1" value="10" />+
     <input type="text" name="v2" id="v2" value="20" />=
     <input type="text" name="result" id="result" value="" /><button id="one">
