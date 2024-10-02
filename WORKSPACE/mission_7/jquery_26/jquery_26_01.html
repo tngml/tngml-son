@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+
+            let movieData;
+            let showItemList;
+
+            $(document).ready(function(){
+                $.ajax({
+                    url : "orderList.json",
+                    dataType : "json",
+                    success : function(data){
+                        movieData = data;
+                        let trList = "";
+
+                        $.each(data, function(index,item){
+                            let tot =0;
+                            let cnt =0;
+                            $.each(item.orderItems,function(index,oItem){
+                                cnt += oItem.quantity;
+                                tot += (oItem.itemPrice * oItem.quantity)    
+                            });
+
+
+                            trList += "<tr>";
+                                trList += `<td>${item.orderNum}</td>`;
+                                trList += `<td><a href="javascript:showItemList(${item.orderNum})">${item.memName}</a></td>`;
+                                trList += `<td>${item.orderDt}</td>`;
+                                trList += `<td>${cnt}</td>`;
+                                trList += `<td>${tot}</td>`;
+                            trList += "</tr>";
+
+
+                            showItemList = (orderNum) => {
+                                let trList =`               
+                                            <tr>
+                                                <th>Order Num</th>
+                                                <th>item Num</th>
+                                                <th>item Name</th>
+                                                <th>price</th>
+                                                <th>order qty</th>
+                                            </tr>`;
+                                
+                                    for(let i =0; i<movieData.length; i++){
+                                        console.log(movieData[i].orderNum + "  |  " + orderNum )
+                                        if(movieData[i].orderNum === orderNum){
+                                            $.each(movieData[i].orderItems,function(index,item){
+                                                trList += "<tr>"
+                                                trList += `<td>${orderNum}</td>`
+                                                trList += `<td>${item.itemNum}</td>`
+                                                trList += `<td>${item.itemName}</td>`
+                                                trList += `<td>${item.itemPrice}</td>`
+                                                trList += `<td>${item.quantity}</td>`
+                                                trList += "</tr>"
+                                                });
+                                                break;
+                                            }
+                                        }
+                                $("#itemList").html(trList).css("display","");
+                            } // showItemList
+
+                        });
+                        //어디에다 뿌려라
+                        $("#orderList").append(trList);
+                        console.log(data);
+
+                        
+
+                    }
+                })
+            })
+            
+            
+            
+        </script>
+    </head>
+    <body>
+        <h3>상품 주문 목록</h3>
+        <hr/>
+        <p>
+            검색 : <input type="text" /><button>검색</button>
+        </p>
+        <table border="1" id="orderList">
+            <tr>
+                <th>Order Num</th>
+                <th>Member Name</th>
+                <th>Order date</th>
+                <th>Product Count</th>
+                <th>Total Price</th>
+            </tr>          
+        </table>    
+        <hr/>
+        <div>
+            <table border="1" style="display:none" id="itemList">
+                <tr>
+                    <th>Order Num</th>
+                    <th>item Num</th>
+                    <th>item Name</th>
+                    <th>price</th>
+                    <th>order qty</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

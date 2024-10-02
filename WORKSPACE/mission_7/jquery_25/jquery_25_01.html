@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      /* 
+	   다음 url 활용하여 구현한다.
+       http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=3d430a039fb1bae3fe5f0bc48df64e46&targetDt=20120101
+	   */
+      $("#req").on("click", function(){
+        // let date = $("#targetDt").val();
+        $.ajax({
+            url: 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=3d430a039fb1bae3fe5f0bc48df64e46&targetDt=20120101',
+             method: 'get',
+             dataType: 'json',
+             success : function(data){
+                 //   console.log(data);
+                 let table = "<table border= '1'>";
+                     table += "<tr>";
+                     table += "<순위>";
+                     table += "<제목>";
+                     table += "<개봉일자>";
+                     table += "<상영횟수>";
+                     table += "</tr>";
+ 
+                 $.each(data.boxOfficeResult.dailyBoxOfiiceList, function(index,item){
+ 
+                     table += "<tr>";
+                     table += `<td>${item.rank}</td>`;
+                     table += `<td>${item.movieNm}</td>`;
+                     table += `<td>${item.openDt}</td>`;
+                     table += `<td>${item.showCnt}</td>`;
+                     table += "</tr>";
+                     // console.log("rank :",item.rank);
+                     // console.log("title :",item.movieNm);
+                     // console.log(item.openDt);
+                     // console.log(item.showCnt);
+                 })
+
+                 table += "</table>";
+
+                 $("#result").html(table);
+             },
+             error : function(){}
+         })
+      })
+    })
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</head>
+<body>
+<h1>박스오피스 순위</h1>
+<input type="text" name="targetDt" id="targetDt" placeholder="입력포맷:20230101">
+<button id="req">요청</button>
+<div id="result"></div>
+  <table border="1" id="print">
+
+  </table>
+</body>
+</html>

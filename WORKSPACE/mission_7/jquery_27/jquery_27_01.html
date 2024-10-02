@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            let boardList;
+            let rowCnt =5;
+
+            $(document).ready(function(){
+                $.ajax({
+                    url : "boardList.json",
+                    dataType : "json",
+                    success : function(data){
+                        boardList = data;
+                        //data를 돌릴꺼야
+                        showPage(1);
+                        showPageGroup();
+                        // let tr ="";
+
+                        // $.each(data,function(index,board){
+                        //     tr += "<tr>";
+                        //     tr += `<td>${board.num}</td>`;
+                        //     tr += `<td>${board.title}</td>`;
+                        //     tr += `<td>${board.createDt}</td>`;
+                        //     tr += `<td>${board.hit}</td>`;
+                        //     tr += "</tr>"
+
+                        // });
+                          //이렇게 만든걸 화면에 붙여야함
+
+                        }
+                    });
+                    const showPage = (pageNum) => {
+
+                        //1페이지 : 0~4
+                        //2페이지 : 5~9
+                        //3페이지 : 10~14
+        
+                        let start = (pageNum -1) * rowCnt
+                        let end = start + rowCnt;
+                        if((start + rowCnt) > boardList.length){
+                            end = boardList.length;
+                        }
+        
+                         let tr =`            <tr>
+                        <th>Num</th>
+                        <th>Title</th>
+                        <th>Create Date</th>
+                        <th>Hit</th>
+                    </tr>`;
+        
+                        for(let i =start; i<end; i++){
+                            
+                            tr += "<tr>";
+                            tr += `<td>${boardList[i].num}</td>`;
+                            tr += `<td>${boardList[i].title}</td>`;
+                            tr += `<td>${boardList[i].createDt}</td>`;
+                            tr += `<td>${boardList[i].hit}</td>`;
+                            tr += "</tr>"
+        
+                        };
+                          //이렇게 만든걸 화면에 붙여야함
+                          
+                       $("table").append(tr);
+                        };
+
+                        const showPageGroup = ()=>{
+                          console.log(boardList.length / rowCnt);
+
+                          let pageCnt =0;
+
+                          if(boardList.length % rowCnt !==0){
+                           Math.ceil(boardList.length/ rowCnt);
+                          } else{
+                            pageCnt = boardList.length/ rowCnt;
+                          };
+                          console.log(pageCnt);
+                          let linkList = "";
+                          for (let i=1; i<=pageCnt; i++){
+                            linkList += `<a href="javascript:showPage"(${i})">[${i}]</a>`;
+                          }
+
+                          $("span").html(linkList);
+                        }
+
+                  
+            });
+
+
+
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Num</th>
+                <th>Title</th>
+                <th>Create Date</th>
+                <th>Hit</th>
+            </tr>
+        </table>
+        <div>페이지 번호 : <span></span></div>
+    </body>
+</html>

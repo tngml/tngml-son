@@ -1,5 +1,8 @@
-// function FunctionComponent() {
-//   return <h1>함수형 컴포넌트</h1>;
+//  function FunctionComponent() {
+//  return <h1>함수형 컴포넌트</h1>;
+//  사용자 정의 태그
+//  재사용 가능
+//  항상 대문자로 시작
 // }
 
 // export default FunctionComponent;
