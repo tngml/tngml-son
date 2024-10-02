@@ -130,6 +130,9 @@ export default MissionThree;
 //boardList에 있는 값을 복사해서 넣음 
 // import {useState} from "react" 있어야 사용가능 
 // const [dataList,setDataList] = useState([...boardList]);
+// useEffect(() =>{
+    //setDataList([...boardList]);
+    //})
 // const list = ()=> {
 //     //board라는 변수에 담을꺼야
 //     return (boardList.map((board) => {

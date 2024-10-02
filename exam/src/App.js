@@ -14,14 +14,22 @@ import MissionOne from './MissionOne_stu';
 import MissionTwo from './MissionTwo_stu';
 import MissionThree from './MissionThree_stu';
 import MissionFour from './MissionFour_stu';
+import LifeCycleTest from './test/LifeCycleTest';
+import StateTest01 from './test/StateTest01';
+import EffectTest from './test/EffectTest';
+import AjaxTest from './test/AjaxTest.js';
+import MemberInsertComponent from './test/MemberInsertComponent.js';
+import MemberListComponent from './test/MemberListComponent.js';
+import MemberDetailComponent from './test/MemberDetailComponent.js';
 
 const App = () => {
   
   return (
     <>
+    {/* <LifeCycleTest/> */}
     <BrowserRouter>
     <Routes>
-      <Route path='/' element = {<MainComponent/>} />
+      {/* <Route path='/' element = {<MainComponent/>} />
       <Route path='addMember' element = {<LoginComponent name = "testName"/>} />
       <Route path='classType' element = {<ClsComponent/>} />
       <Route path='div' element = {<DivComponent/>} />
@@ -34,6 +42,13 @@ const App = () => {
       <Route path='mission2' element = {<MissionTwo/>} />
       <Route path='mission3' element = {<MissionThree/>} />
       <Route path='mission4' element = {<MissionFour/>} />
+      <Route path='lifeCycle' element = {<LifeCycleTest/>} />
+      <Route path='state' element = {<StateTest01/>} />
+      <Route path='effect' element = {<EffectTest/>} />
+      <Route path='ajax' element = {<AjaxTest/>} /> */}
+      <Route path='memberInsertForm' element = {<MemberInsertComponent/>} />
+      <Route path='memberList' element = {<MemberListComponent/>} />
+      <Route path='memberDetail/:id' element = {<MemberDetailComponent/>} />
     </Routes>
     </BrowserRouter>
     </>
