@@ -6,25 +6,35 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-   $(document).ready(function(){	
-	$("#all").click(function(){
-		let all = this;
-		console.log(all)
-		if(all.checked){
-			$(".lang").each(function(){
-				$(this).prop('checked', true)
-			})
-		}else{
-			$(".lang").each(function(){
-				$(this).prop('checked', false)
-			})
-		}
+//    $(document).ready(function(){	
+// 	$("#all").click(function(){
+// 		let all = this;
+// 		console.log(all)
+// 		if(all.checked){
+// 			$(".lang").each(function(){
+// 				$(this).prop('checked', true)
+// 			})
+// 		}else{
+// 			$(".lang").each(function(){
+// 				$(this).prop('checked', false)
+// 			})
+// 		}
 	
+// 	})
+//    })
+
+function info(){
+	let all = document.querySelector("#all");
+	all.addEventListener("click",function(){
+		let checkList = document.querySelectorAll(".lang");
+		for(let i =0; i<checkList.length; i++){
+			check
+		}
 	})
-   })
+}
 </script>
 </head>
-<body>
+<body onload="info()">
 전체선택
 <input type="checkbox" name="all" id="all" ><br>
 <input type="checkbox" name="java" class="lang">java<br>

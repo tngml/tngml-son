@@ -21,6 +21,8 @@ import AjaxTest from './test/AjaxTest.js';
 import MemberInsertComponent from './test/MemberInsertComponent.js';
 import MemberListComponent from './test/MemberListComponent.js';
 import MemberDetailComponent from './test/MemberDetailComponent.js';
+import Mission1 from './Mission1.js';
+import AjaxTest1 from './test/AjaxTest1.js'
 
 const App = () => {
   
@@ -41,7 +43,6 @@ const App = () => {
       <Route path='mission1' element = {<MissionOne/>} />
       <Route path='mission2' element = {<MissionTwo/>} />
       <Route path='mission3' element = {<MissionThree/>} />
-      <Route path='mission4' element = {<MissionFour/>} />
       <Route path='lifeCycle' element = {<LifeCycleTest/>} />
       <Route path='state' element = {<StateTest01/>} />
       <Route path='effect' element = {<EffectTest/>} />
@@ -49,6 +50,9 @@ const App = () => {
       <Route path='memberInsertForm' element = {<MemberInsertComponent/>} />
       <Route path='memberList' element = {<MemberListComponent/>} />
       <Route path='memberDetail/:id' element = {<MemberDetailComponent/>} />
+      <Route path='mission1' element = {<Mission1/>} />
+      <Route path='missiona4' element = {<MissionFour/>}/>
+      <Route path='ajax' element = {<AjaxTest/>}/>
     </Routes>
     </BrowserRouter>
     </>

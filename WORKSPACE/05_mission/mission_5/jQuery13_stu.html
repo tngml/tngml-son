@@ -6,24 +6,42 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-   $(document).ready(function() {
+//    $(document).ready(function() {
 	
-     $("button").click(function(){
-		let str = "";
-		$("input[name='hobby']:checked").each(function(){
-			console.log($(this).val())
-			str += $(this).val();
-		});
-		 console.log(str);
-		 $("#result").html("<h1>" + str + "</h1>");
-	 });
+//      $("button").click(function(){
+// 		let str = "";
+// 		$("input[name='hobby']:checked").each(function(){
+// 			console.log($(this).val())
+// 			str += $(this).val();
+// 		});
+// 		 console.log(str);
+// 		 $("#result").html("<h1>" + str + "</h1>");
+// 	 });
 	 
    
-	});
+// 	});
+
+function info(){
+	let btn = document.querySelector("button");
+	btn.addEventListener("click",function(){
+		let checkList = document.querySelectorAll ("input[type = checkbox]");
+		let result = document.querySelector("#result");
+
+		let str = "";
+		for(let i =0; i<checkList.length; i++){
+			if(checkList[i].checked){
+				str+= checkList[i].value
+			}
+
+			result.innerHTML = str;
+		}
+	})
+}
+
 
 </script>
 </head>
-<body>
+<body onload="info()">
 취미<br>
 <ul>
 <li>야구<input type="checkbox" name="hobby" value="야구"></li>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission3</title>
+</head>
+<body>
+    <form action="" method="get" style="border: 1px solid black; width: 500px;">
+        <div style="margin: 10px;">
+            <h1>Payment Form</h1>
+            <hr>
+            <p>Required fields are followed by *</p>
+
+            <h2>Contact Information</h2>
+            <label for="name" >Name: *</label>
+            <input type="text" placeholder="smith" id="name">
+
+            <br><br>
+
+            <fieldset style="height: 80px;">
+                <legend>Gender *</legend>
+                <div style="margin-top: 20px;">
+                    <label for="male">Male</label>
+                    <input type="radio" value="male" id="male" name="gender">
+                    <label for="Female">Female</label>
+                    <input type="radio" value="Female" id="Female" name="gender">
+                    <label for="Other">Other</label>
+                    <input type="radio" value="Other" id="Other" name="gender">
+                </div>
+                
+            </fieldset>
+
+            <br>
+
+            <label>Address:</label>
+            <textarea placeholder="Enter the address" cols="66" rows="5"></textarea>
+
+            <br><br>
+
+            <label for="email">Email: *</label>
+            <input type="email" id="email" placeholder="smith@gmail.com">
+
+            <br><br>
+
+            <label for="pincode">Pincode: *</label>
+            <input type="password" id="pincode" placeholder="123456">
+            
+            <br><br>
+            <hr>
+        
+            <h2>Payment Information</h2>
+            
+            <label for="card">Card Type: *</label>
+            <select name="card" id="card">
+                <option value="" selected>--Select a Card Type--</option>
+                <option value="rupay">Rupay</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="visa">Visa</option>
+            </select>
+            
+            <br><br>
+            
+            <label for="cardNumber">Card number: *</label>
+            <input type="text" placeholder="1111-2222-3333-4444" id="cardNumber">
+
+            <br><br>
+            
+            <label for="expiration">Expiraton Date: *</label>
+            <input type="date" id="expiration">
+
+            <br><br>
+
+            <label for="cvv">CVV: *</label>
+            <input type="text" id="cvv">
+
+            <br><br>
+
+            <input type="submit" value="Pay now">
+            
+        </div>
+       
+    </form>
+</body>
+</html>

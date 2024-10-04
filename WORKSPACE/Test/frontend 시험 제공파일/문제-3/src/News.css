@@ -1,0 +1,17 @@
+#tableList.first-child{
+    color:rgb(100, 100, 100);
+};
+
+
+#tableList.nth-child{
+    background-color :rgb(200, 200, 200);
+
+}
+
+a{
+    text-decoration:none;
+}
+
+#tableList:hover {
+    background-color: yellow;
+}

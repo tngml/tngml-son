@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const productList = [
+                {
+                    num : 1,
+                    name : "시드니 6, 7일",
+                    company : "하나투어",
+                    price : "1129000"
+                },
+                {
+                    num : 2,
+                    name : "튀르키예 9~12일",
+                    company : "모두투어",
+                    price : "1499000"
+                },
+                {
+                    num : 3,
+                    name : "나트랑/달랏 5,6일",
+                    company : "노랑우산",
+                    price : "379900"
+                },
+                {
+                    num : 4,
+                    name : "동유럽 3국 8,9일",
+                    company : "인터파크투어",
+                    price : "2999000"
+                },
+            ];
+
+            const init = () => {
+                let trList = "<tr>";
+                trList += "<th><input class='all' type='checkbox' /></th>";
+                trList += "<th>번호</th>";
+                trList += "<th>상품명</th>";
+                trList += "<th>제조사</th>";
+                trList += "<th>가격</th>";
+                trList += "</tr>";
+
+                for(let i = 0; i < productList.length; i++) {
+                    let num = productList[i].num;
+                    let name = productList[i].name;
+                    let company = productList[i].company;
+                    let price = productList[i].price;
+
+                    trList += "<tr>";
+                    trList += `<td><input class="product" type="checkbox" value="${num}" /></td>`;
+                    trList += `<td>${num}</td>`;
+                    trList += `<td class="name">${name}</td>`;
+                    trList += `<td>${company}</td>`;
+                    trList += `<td class="price">${price}</td>`;
+                    trList += "</tr>";
+                }
+
+                let table = document.querySelector("table");
+                table.innerHTML = trList;
+            }
+
+            const buy = () => {
+                let checkboxList = document.querySelectorAll(".product");
+                let nameList = document.querySelectorAll(".name");
+                let priceList = document.querySelectorAll(".price");
+
+                let buyList = "";
+                let totalPrice = 0;
+
+                for(let i = 0; i < checkboxList.length; i++) {
+                    if(checkboxList[i].checked) {
+                        buyList += nameList[i].innerText + "<br/>";
+                        totalPrice += parseInt(priceList[i].innerText);
+                    }
+                }
+
+                buyList += "총 금액 : " + totalPrice;
+
+                let div = document.querySelector("div");
+                div.innerHTML = buyList;
+            }
+
+
+
+
+            const check = () => {
+                let trList = "<tr>";
+                trList += "<th><input class='all' type='checkbox' /></th>";
+                trList += "<th>번호</th>";
+                trList += "<th>상품명</th>";
+                trList += "<th>제조사</th>";
+                trList += "<th>가격</th>";
+                trList += "</tr>";
+
+                for(let i = 0; i < productList.length; i++) {
+                    let num = productList[i].num;
+                    let name = productList[i].name;
+                    let company = productList[i].company;
+                    let price = productList[i].price;
+
+                    trList += "<tr>";
+                    trList += `<td><input class="product" type="checkbox" value="${num}" /></td>`;
+                    trList += `<td>${num}</td>`;
+                    trList += `<td class="name">${name}</td>`;
+                    trList += `<td>${company}</td>`;
+                    trList += `<td class="price">${price}</td>`;
+                    trList += "</tr>";
+                }
+
+            }
+
+
+        </script>
+    </head>
+    <body onload="init()">
+        <h1>상품 목록</h1>
+        <hr/>
+        <table border="1">
+        </table>
+        <p>
+            <button onclick="buy()">구매</button>
+        </p>
+        <hr/>
+        <div></div>
+    </body>
+</html>

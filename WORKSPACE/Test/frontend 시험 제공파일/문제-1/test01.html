@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function info(){
+                let add = document.querySelector("#add");
+                add.addEventListener("click",function(){
+                
+
+                })
+
+                let btn = document.querySelector("#btn");
+                btn.addEventListener("click",function(){
+                    
+                    let select = document.querySelectorAll("option").value;
+                    //let 
+                    confirm("아래 내용으로 저장할까요?")
+
+                })
+            }
+
+        </script>
+    </head>
+
+    <body onload="info()"> 
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>분야</th>
+                    <td><fieldset>
+                        <select>
+                            <option>제조</option>
+                            <option>물류</option>
+                            <option>정보통신</option>
+                            <option>건설</option>
+                        </select>
+                    </fieldset></td>
+                </tr>
+                <tr>
+                    <th>과제명</th>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <th>예산금액</th>
+                    <td><input type="number">원</td>
+                </tr>
+                <tr>
+                    <th>관련파일 <button id="add">추가</button></th>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    
+                    <th colspan="6"><button id="btn">등록</button></td>
+
+                </tr>
+            </thead>
+        </table>
+
+
+    </body>
+</html>
